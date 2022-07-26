@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xabifk</title>
+    
+    
+    
+    <link>/</link>
+    <description>Recent content on Xabifk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          A website where I&amp;rsquo;ll post stuff and things
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Alune</title>
+      <link>/alune/</link>
+      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/alune/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          You know it # Just literally the best thing ever!
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Test post</title>
+      <link>/posts/2020/04/test-post/</link>
+      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020/04/test-post/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          This is just a test post # There&amp;rsquo;s really nothing to see here. I&amp;rsquo;m just a test.
+You want flags? # What are you talking about? I don&amp;rsquo;t have any flags. But why does this remind me of peanuts?
+For real, you can go away # You are wasting your time and my bandwidth.
+Follow the following steps:
+Go away Run # rm -rf / Just leave &amp;hellip; Please Still here?
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Archive</title>
+      <link>/archive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/archive/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          
+          
+        
+        </description>
+    </item>
+    
+  </channel>
+</rss>
