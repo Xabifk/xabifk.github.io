@@ -5,21 +5,21 @@
     
     
     
-    <link>/posts/</link>
+    <link>https://xabifk.com/posts/</link>
     <description>Recent content in Posts on Xabifk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xabifk.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Test post</title>
-      <link>/posts/2020/04/test-post/</link>
+      <link>https://xabifk.com/posts/2020/04/test-post/</link>
       <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2020/04/test-post/</guid>
+      <guid>https://xabifk.com/posts/2020/04/test-post/</guid>
       <description>
         
           
