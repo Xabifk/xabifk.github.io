@@ -11,8 +11,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta
   name="description"
-  content=" BRO64 # Proof of flag # ctf{f38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0} # Summary of the vulnerabilities identified # By connecting with netcat and sending some data you would get an HTTP Bad Request Error.
-nc 35.198.183.125 31604 asdf Error response Error response Error code 400. Message: Bad request syntax (&lsquo;asdf&rsquo;). Error code explanation: 400 = Bad request syntax or unsupported method. So the natural thing is to use curl. By using curl you whould get some and weird json data.
+  content=" BRO64 # Proof of flag # ctf{f38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0} Summary of the vulnerabilities identified # By connecting with netcat and sending some data you would get an HTTP Bad Request Error.
+nc 35.198.183.125 31604 asdf &lt;head&gt;&lt;/head&gt; &lt;title&gt;Error response&lt;/title&gt; &lt;body&gt;&lt;/body&gt; &lt;h1&gt;Error response&lt;/h1&gt; Error code 400. Message: Bad request syntax (&#39;asdf&#39;). Error code explanation: 400 = Bad request syntax or unsupported method. So the natural thing is to use curl. By using curl you whould get some and weird json data.
 "
 />
 <meta
@@ -50,16 +50,16 @@ nc 35.198.183.125 31604 asdf Error response Error response Error code 400. Messa
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="BRO64">
-  <meta name="twitter:description" content="BRO64 # Proof of flag # ctf{f38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0} # Summary of the vulnerabilities identified # By connecting with netcat and sending some data you would get an HTTP Bad Request Error.
-nc 35.198.183.125 31604 asdf Error response Error response Error code 400. Message: Bad request syntax (‘asdf’). Error code explanation: 400 = Bad request syntax or unsupported method. So the natural thing is to use curl. By using curl you whould get some and weird json data.">
+  <meta name="twitter:description" content="BRO64 # Proof of flag # ctf{f38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0} Summary of the vulnerabilities identified # By connecting with netcat and sending some data you would get an HTTP Bad Request Error.
+nc 35.198.183.125 31604 asdf &lt;head&gt;&lt;/head&gt; &lt;title&gt;Error response&lt;/title&gt; &lt;body&gt;&lt;/body&gt; &lt;h1&gt;Error response&lt;/h1&gt; Error code 400. Message: Bad request syntax (&#39;asdf&#39;). Error code explanation: 400 = Bad request syntax or unsupported method. So the natural thing is to use curl. By using curl you whould get some and weird json data.">
 
 
 
 <meta property="og:url" content="/posts/2020/12/bro64/">
   <meta property="og:site_name" content="Xabifk">
   <meta property="og:title" content="BRO64">
-  <meta property="og:description" content="BRO64 # Proof of flag # ctf{f38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0} # Summary of the vulnerabilities identified # By connecting with netcat and sending some data you would get an HTTP Bad Request Error.
-nc 35.198.183.125 31604 asdf Error response Error response Error code 400. Message: Bad request syntax (‘asdf’). Error code explanation: 400 = Bad request syntax or unsupported method. So the natural thing is to use curl. By using curl you whould get some and weird json data.">
+  <meta property="og:description" content="BRO64 # Proof of flag # ctf{f38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0} Summary of the vulnerabilities identified # By connecting with netcat and sending some data you would get an HTTP Bad Request Error.
+nc 35.198.183.125 31604 asdf &lt;head&gt;&lt;/head&gt; &lt;title&gt;Error response&lt;/title&gt; &lt;body&gt;&lt;/body&gt; &lt;h1&gt;Error response&lt;/h1&gt; Error code 400. Message: Bad request syntax (&#39;asdf&#39;). Error code explanation: 400 = Bad request syntax or unsupported method. So the natural thing is to use curl. By using curl you whould get some and weird json data.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -252,78 +252,26 @@ nc 35.198.183.125 31604 asdf Error response Error response Error code 400. Messa
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<h3 id="ctff38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0">
-  <strong>ctf{f38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0}</strong>
-  <a href="#ctff38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0" class="h-anchor" aria-hidden="true">#</a>
-</h3>
-<h3 id="summary-of-the-vulnerabilities-identified">
+<pre tabindex="0"><code>ctf{f38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
 <p>By connecting with netcat and sending some data you would get an HTTP Bad Request Error.</p>
-<table>
-  <thead>
-      <tr>
-          <th>nc 35.198.183.125 31604</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>asdf</td>
-      </tr>
-      <tr>
-          <td><!-- raw HTML omitted --><!-- raw HTML omitted --></td>
-      </tr>
-      <tr>
-          <td><!-- raw HTML omitted -->Error response<!-- raw HTML omitted --></td>
-      </tr>
-      <tr>
-          <td></td>
-      </tr>
-      <tr>
-          <td><!-- raw HTML omitted --><!-- raw HTML omitted --></td>
-      </tr>
-      <tr>
-          <td><!-- raw HTML omitted -->Error response<!-- raw HTML omitted --></td>
-      </tr>
-      <tr>
-          <td>Error code 400.</td>
-      </tr>
-      <tr>
-          <td>Message: Bad request syntax (&lsquo;asdf&rsquo;).</td>
-      </tr>
-      <tr>
-          <td>Error code explanation: 400 = Bad request syntax or unsupported method.</td>
-      </tr>
-      <tr>
-          <td></td>
-      </tr>
-  </tbody>
-</table>
-<p>So the natural thing is to use curl. By using curl you whould get some and weird json data.</p>
-<table>
-  <thead>
-      <tr>
-          <th></th>
-          <th>_</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>🔥 🖌 😽 🕶 🛛 curl http://35.198.183.125:31604</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td><!-- raw HTML omitted -->{&ldquo;nonce&rdquo;: &ldquo;eCBaOam94l8=&rdquo;, &ldquo;ciphertext&rdquo;: &ldquo;3juD5kXRubvP3/1fhHZKScGv1f86vMMr49cgtpEQC52j9zURouxYtC/aR1gAVAc8YH0XeM3dC5H<!-- raw HTML omitted --></td>
-          <td>l</td>
-      </tr>
-      <tr>
-          <td>q6yA3WTnbP4HfQFrs&rdquo;, &ldquo;key&rdquo;: &ldquo;Fidel_Alejandro_Castro_Ruz_Cuba!&rdquo;}</td>
-          <td></td>
-      </tr>
-  </tbody>
-</table>
-<h3 id="proof-of-solving">
+<pre tabindex="0"><code>nc 35.198.183.125 31604
+asdf
+&lt;head&gt;&lt;/head&gt;
+&lt;title&gt;Error response&lt;/title&gt;
+
+&lt;body&gt;&lt;/body&gt;
+&lt;h1&gt;Error response&lt;/h1&gt;
+Error code 400.
+Message: Bad request syntax (&#39;asdf&#39;).
+Error code explanation: 400 = Bad request syntax or unsupported method.
+</code></pre><p>So the natural thing is to use curl. By using curl you whould get some and weird json data.</p>
+<pre tabindex="0"><code>curl http://35.198.183.125:31604
+{&#34;nonce&#34;: &#34;eCBaOam94l8=&#34;, &#34;ciphertext&#34;: &#34;3juD5kXRubvP3/1fhHZKScGv1f86vMMr49cgtpEQC52j9zURouxYtC/aR1gAVAc8YH0XeM3dC5Hlq6yA3WTnbP4HfQFrs&#34;, &#34;key&#34;: &#34;Fidel_Alejandro_Castro_Ruz_Cuba!&#34;}
+</code></pre><h3 id="proof-of-solving">
   <strong>Proof of solving</strong>
   <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
 </h3>

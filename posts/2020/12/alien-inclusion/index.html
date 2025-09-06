@@ -265,14 +265,17 @@ Proof of solving # When we first access the page we are greeted by what seems to
   <strong>Proof of solving</strong>
   <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<p><img src="attachments/_page_23_Picture_7.jpeg" alt=""></p>
+
+  <figure class="left" >
+    <img src="/posts/dctf2020/attachments/_page_23_Picture_7.jpeg"   />
+    
+  </figure>
+
+
 <p>When we first access the page we are greeted by what seems to be the source code of the index.php file. Based on this source code, the name of the challenge and its description <strong>&ldquo;Keep it local and you should be fine. The flag is in /var/www/html/flag.php.&rdquo;</strong>, it is obvious we need to set the value of the &ldquo;start&rdquo; POST parameter to the absolute path of the flag and to also add a random value for the start GET parameter (also known as a query argument) in order to provent the exit on line 5 from ever being executed.</p>
 <p>Following these steps we can submit a request to the server using the following curl command in order to obtain the flag.</p>
-<h3 id="curl--x-post--d">
-  <strong>curl -X POST -d &ldquo;start=/var/www/html/flag.php&rdquo; 34.89.211.188:32193?start=false</strong>
-  <a href="#curl--x-post--d" class="h-anchor" aria-hidden="true">#</a>
-</h3>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X POST -d <span style="color:#e6db74">&#34;start=/var/www/html/flag.php&#34;</span> 34.89.211.188:32193?start<span style="color:#f92672">=</span>false
+</span></span></code></pre></div>
     </div>
     
       

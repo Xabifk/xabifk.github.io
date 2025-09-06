@@ -11,8 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta
   name="description"
-  content=" DUMB-DISCORD # Proof of flag # ctf{1b8fa7f33da67dfeb1d5f79850dcf13630b5563e98566bf7b76281d409d728c6}
-Summary of the vulnerabilities identified # Invite the bot to a Discord server, give it the &lsquo;dctf2020.cyberedu.ro&rsquo; role, use the payload &lsquo;/s基ay //getflaggetflag&rsquo; to get the encoded flag and then decode it.
+  content=" DUMB-DISCORD # Proof of flag # ctf{1b8fa7f33da67dfeb1d5f79850dcf13630b5563e98566bf7b76281d409d728c6} Summary of the vulnerabilities identified # Invite the bot to a Discord server, give it the &lsquo;dctf2020.cyberedu.ro&rsquo; role, use the payload &lsquo;/s基ay //getflaggetflag&rsquo; to get the encoded flag and then decode it.
 Proof of solving # First off, we need to decompile the binary using &lsquo;uncompyle6&rsquo; and look at the code. But before I copy paste all the code we need to replace the obfuscated strings. A simple xor encoding is used, and we can use the included decoding function to replace them with the real strings. And we end up with this:
 "
 />
@@ -51,8 +50,7 @@ Proof of solving # First off, we need to decompile the binary using &lsquo;uncom
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="DUMB-DISCORD">
-  <meta name="twitter:description" content="DUMB-DISCORD # Proof of flag # ctf{1b8fa7f33da67dfeb1d5f79850dcf13630b5563e98566bf7b76281d409d728c6}
-Summary of the vulnerabilities identified # Invite the bot to a Discord server, give it the ‘dctf2020.cyberedu.ro’ role, use the payload ‘/s基ay //getflaggetflag’ to get the encoded flag and then decode it.
+  <meta name="twitter:description" content="DUMB-DISCORD # Proof of flag # ctf{1b8fa7f33da67dfeb1d5f79850dcf13630b5563e98566bf7b76281d409d728c6} Summary of the vulnerabilities identified # Invite the bot to a Discord server, give it the ‘dctf2020.cyberedu.ro’ role, use the payload ‘/s基ay //getflaggetflag’ to get the encoded flag and then decode it.
 Proof of solving # First off, we need to decompile the binary using ‘uncompyle6’ and look at the code. But before I copy paste all the code we need to replace the obfuscated strings. A simple xor encoding is used, and we can use the included decoding function to replace them with the real strings. And we end up with this:">
 
 
@@ -60,8 +58,7 @@ Proof of solving # First off, we need to decompile the binary using ‘uncompyle
 <meta property="og:url" content="/posts/2020/12/dumb-discord/">
   <meta property="og:site_name" content="Xabifk">
   <meta property="og:title" content="DUMB-DISCORD">
-  <meta property="og:description" content="DUMB-DISCORD # Proof of flag # ctf{1b8fa7f33da67dfeb1d5f79850dcf13630b5563e98566bf7b76281d409d728c6}
-Summary of the vulnerabilities identified # Invite the bot to a Discord server, give it the ‘dctf2020.cyberedu.ro’ role, use the payload ‘/s基ay //getflaggetflag’ to get the encoded flag and then decode it.
+  <meta property="og:description" content="DUMB-DISCORD # Proof of flag # ctf{1b8fa7f33da67dfeb1d5f79850dcf13630b5563e98566bf7b76281d409d728c6} Summary of the vulnerabilities identified # Invite the bot to a Discord server, give it the ‘dctf2020.cyberedu.ro’ role, use the payload ‘/s基ay //getflaggetflag’ to get the encoded flag and then decode it.
 Proof of solving # First off, we need to decompile the binary using ‘uncompyle6’ and look at the code. But before I copy paste all the code we need to replace the obfuscated strings. A simple xor encoding is used, and we can use the included decoding function to replace them with the real strings. And we end up with this:">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
@@ -255,8 +252,8 @@ Proof of solving # First off, we need to decompile the binary using ‘uncompyle
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<p>ctf{1b8fa7f33da67dfeb1d5f79850dcf13630b5563e98566bf7b76281d409d728c6}</p>
-<h3 id="summary-of-the-vulnerabilities-identified">
+<pre tabindex="0"><code>ctf{1b8fa7f33da67dfeb1d5f79850dcf13630b5563e98566bf7b76281d409d728c6}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
@@ -296,42 +293,46 @@ async def on_message(message): # where the magic happens
 await client.process_commands(message)
 if &#39;!ping&#39; in message.content.lower(): # pong
 await message.channel.send(&#39;pong&#39;)
-</code></pre><p><img src="attachments/_page_8_Figure_0.jpeg" alt=""></p>
+</code></pre>
+  <figure class="left" >
+    <img src="/posts/dctf2020/attachments/_page_8_Figure_0.jpeg"   />
+    
+  </figure>
+
+
 <p>So, we need a specific user that has the role &lsquo;dctf2020.cyberedu.ro&rsquo; to send &lsquo;/getflag&rsquo;. But who is that user anyway?</p>
-<table>
-  <thead>
-      <tr>
-          <th></th>
-          <th>DCTFTargetWhyNot#1969</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Bot</td>
-          <td>True</td>
-      </tr>
-      <tr>
-          <td>Badges</td>
-          <td>None</td>
-      </tr>
-      <tr>
-          <td>ID</td>
-          <td>783473293554352141</td>
-      </tr>
-      <tr>
-          <td>Created</td>
-          <td>2020-12-01 23:23:09 UTC</td>
-      </tr>
-  </tbody>
-</table>
-<p>I think that our target! We can invite it to our server by going to <a href="https://discord.com/oauth2/authorize?client_id=783473293554352141&amp;scope=bot">&lsquo;https://discord.com/oauth2/authorize?client\_id=783473293554352141&amp;scope=bot&rsquo;</a> Giving it the role is simple enough, nothing fancy. Now we need to make it speak In the &lsquo;/s基ay&rsquo; command &lsquo;/getflag&rsquo; is only replaced once so we can craft a message that becomes &lsquo;/getflag&rsquo; after replacing A possible message is &lsquo;/s基ay //getflaggetflag&rsquo;</p>
-<p><img src="attachments/_page_9_Picture_0.jpeg" alt=""></p>
+<pre tabindex="0"><code>DCTFTargetWhyNot#1969
+Bot: True
+Badges: None
+ID: 783473293554352141
+Created: 2020-12-01 23:23:09 UTC
+</code></pre><p>I think that our target! We can invite it to our server by going to <a href="https://discord.com/oauth2/authorize?client_id=783473293554352141&amp;scope=bot">&lsquo;https://discord.com/oauth2/authorize?client\_id=783473293554352141&amp;scope=bot&rsquo;</a> Giving it the role is simple enough, nothing fancy. Now we need to make it speak In the &lsquo;/s基ay&rsquo; command &lsquo;/getflag&rsquo; is only replaced once so we can craft a message that becomes &lsquo;/getflag&rsquo; after replacing A possible message is &lsquo;/s基ay //getflaggetflag&rsquo;</p>
+
+  <figure class="left" >
+    <img src="/posts/dctf2020/attachments/_page_9_Picture_0.jpeg"   />
+    
+  </figure>
+
+
 <p>Xabifk 12/05/2020 stai ca mai e un check /s基ay //getflaggetflag</p>
-<p><img src="attachments/_page_9_Picture_2.jpeg" alt=""></p>
+
+  <figure class="left" >
+    <img src="/posts/dctf2020/attachments/_page_9_Picture_2.jpeg"   />
+    
+  </figure>
+
+
 <p>DCTFTargetWhyNot 📴 12/05/2020</p>
-<p>/getflag</p>
-<p>b&rsquo;\x00\x00\x00E\x10A\x0e\x00E\x02VA\x00\x0eXC\x17\x12\x17\x0b_\x0 3H\x05C_CAB\x1d\x0b\x07CWSAT\r[AEG\x17PVRKU\x16\x00L\x16EOZYC\x00 QB]\x0bYFK\x17D\x14&rsquo;</p>
-<p><img src="attachments/_page_9_Picture_6.jpeg" alt=""></p>
+<pre tabindex="0"><code>/getflag
+
+b&#39;\x00\x00\x00E\x10A\x0e\x00E\x02VA\x00\x0eXC\x17\x12\x17\x0b\_\x0 3H\x05C\_CAB\x1d\x0b\x07CWSAT\r[AEG\x17PVRKU\x16\x00L\x16EOZYC\x00 QB]\x0bYFK\x17D\x14&#39;
+</code></pre>
+  <figure class="left" >
+    <img src="/posts/dctf2020/attachments/_page_9_Picture_6.jpeg"   />
+    
+  </figure>
+
+
 <p>Xabifk 12/05/2020 We did it boys</p>
 <p>Finally the flag can easily be decoded with the same function</p>
 

@@ -252,7 +252,13 @@
   <strong>Proof of solving</strong>
   <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<p><img src="attachments/_page_23_Picture_7.jpeg" alt=""></p>
+
+  <figure class="left" >
+    <img src="/posts/dctf2020/attachments/_page_23_Picture_7.jpeg"   />
+    
+  </figure>
+
+
 <p>When we first access the page we are greeted by what seems to be the source code of the index.php file. Based on this source code, the name of the challenge and its description <strong>&ldquo;Keep it local and you should be fine. The flag is in /var/www/html/flag.php.&rdquo;</strong>, it is obvious we need to set the value of the &ldquo;start&rdquo; POST parameter to the absolute path of the flag and to also add a random value for the start GET parameter (also known as a query argument) in order to provent the exit on line 5 from ever being executed.</p>
           
         
@@ -367,11 +373,8 @@
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<h3 id="ctf9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b">
-  <strong>ctf{9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b}</strong>
-  <a href="#ctf9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b" class="h-anchor" aria-hidden="true">#</a>
-</h3>
-<h3 id="summary-of-the-vulnerabilities-identified">
+<pre tabindex="0"><code>ctf{9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
@@ -432,55 +435,23 @@
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<h3 id="ctff38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0">
-  <strong>ctf{f38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0}</strong>
-  <a href="#ctff38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0" class="h-anchor" aria-hidden="true">#</a>
-</h3>
-<h3 id="summary-of-the-vulnerabilities-identified">
+<pre tabindex="0"><code>ctf{f38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
 <p>By connecting with netcat and sending some data you would get an HTTP Bad Request Error.</p>
-<table>
-  <thead>
-      <tr>
-          <th>nc 35.198.183.125 31604</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>asdf</td>
-      </tr>
-      <tr>
-          <td><!-- raw HTML omitted --><!-- raw HTML omitted --></td>
-      </tr>
-      <tr>
-          <td><!-- raw HTML omitted -->Error response<!-- raw HTML omitted --></td>
-      </tr>
-      <tr>
-          <td></td>
-      </tr>
-      <tr>
-          <td><!-- raw HTML omitted --><!-- raw HTML omitted --></td>
-      </tr>
-      <tr>
-          <td><!-- raw HTML omitted -->Error response<!-- raw HTML omitted --></td>
-      </tr>
-      <tr>
-          <td>Error code 400.</td>
-      </tr>
-      <tr>
-          <td>Message: Bad request syntax (&lsquo;asdf&rsquo;).</td>
-      </tr>
-      <tr>
-          <td>Error code explanation: 400 = Bad request syntax or unsupported method.</td>
-      </tr>
-      <tr>
-          <td></td>
-      </tr>
-  </tbody>
-</table>
-<p>So the natural thing is to use curl. By using curl you whould get some and weird json data.</p>
+<pre tabindex="0"><code>nc 35.198.183.125 31604
+asdf
+&lt;head&gt;&lt;/head&gt;
+&lt;title&gt;Error response&lt;/title&gt;
+
+&lt;body&gt;&lt;/body&gt;
+&lt;h1&gt;Error response&lt;/h1&gt;
+Error code 400.
+Message: Bad request syntax (&#39;asdf&#39;).
+Error code explanation: 400 = Bad request syntax or unsupported method.
+</code></pre><p>So the natural thing is to use curl. By using curl you whould get some and weird json data.</p>
           
         
       </div>
@@ -532,12 +503,15 @@
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<p><img src="attachments/_page_19_Picture_2.jpeg" alt=""></p>
-<h3 id="dctf857ee5051eeccf7cbdfa0ab9986d32f89158429fc12348e15419a969ddcb6bfb">
-  <strong>dctf{857ee5051eeccf7cbdfa0ab9986d32f89158429fc12348e15419a969ddcb6bfb}</strong>
-  <a href="#dctf857ee5051eeccf7cbdfa0ab9986d32f89158429fc12348e15419a969ddcb6bfb" class="h-anchor" aria-hidden="true">#</a>
-</h3>
-<h3 id="summary-of-the-vulnerabilities-identified">
+
+  <figure class="left" >
+    <img src="/posts/dctf2020/attachments/_page_19_Picture_2.jpeg"   />
+    
+  </figure>
+
+
+<pre tabindex="0"><code>dctf{857ee5051eeccf7cbdfa0ab9986d32f89158429fc12348e15419a969ddcb6bfb}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>

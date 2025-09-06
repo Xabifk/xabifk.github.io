@@ -242,7 +242,13 @@
   <strong>Proof of solving</strong>
   <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<p><img src="attachments/_page_23_Picture_7.jpeg" alt=""></p>
+
+  <figure class="left" >
+    <img src="/posts/dctf2020/attachments/_page_23_Picture_7.jpeg"   />
+    
+  </figure>
+
+
 <p>When we first access the page we are greeted by what seems to be the source code of the index.php file. Based on this source code, the name of the challenge and its description <strong>&ldquo;Keep it local and you should be fine. The flag is in /var/www/html/flag.php.&rdquo;</strong>, it is obvious we need to set the value of the &ldquo;start&rdquo; POST parameter to the absolute path of the flag and to also add a random value for the start GET parameter (also known as a query argument) in order to provent the exit on line 5 from ever being executed.</p>
             
           
@@ -367,11 +373,8 @@
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<h3 id="ctf9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b">
-  <strong>ctf{9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b}</strong>
-  <a href="#ctf9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b" class="h-anchor" aria-hidden="true">#</a>
-</h3>
-<h3 id="summary-of-the-vulnerabilities-identified">
+<pre tabindex="0"><code>ctf{9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
@@ -437,55 +440,23 @@
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<h3 id="ctff38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0">
-  <strong>ctf{f38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0}</strong>
-  <a href="#ctff38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0" class="h-anchor" aria-hidden="true">#</a>
-</h3>
-<h3 id="summary-of-the-vulnerabilities-identified">
+<pre tabindex="0"><code>ctf{f38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
 <p>By connecting with netcat and sending some data you would get an HTTP Bad Request Error.</p>
-<table>
-  <thead>
-      <tr>
-          <th>nc 35.198.183.125 31604</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>asdf</td>
-      </tr>
-      <tr>
-          <td><!-- raw HTML omitted --><!-- raw HTML omitted --></td>
-      </tr>
-      <tr>
-          <td><!-- raw HTML omitted -->Error response<!-- raw HTML omitted --></td>
-      </tr>
-      <tr>
-          <td></td>
-      </tr>
-      <tr>
-          <td><!-- raw HTML omitted --><!-- raw HTML omitted --></td>
-      </tr>
-      <tr>
-          <td><!-- raw HTML omitted -->Error response<!-- raw HTML omitted --></td>
-      </tr>
-      <tr>
-          <td>Error code 400.</td>
-      </tr>
-      <tr>
-          <td>Message: Bad request syntax (&lsquo;asdf&rsquo;).</td>
-      </tr>
-      <tr>
-          <td>Error code explanation: 400 = Bad request syntax or unsupported method.</td>
-      </tr>
-      <tr>
-          <td></td>
-      </tr>
-  </tbody>
-</table>
-<p>So the natural thing is to use curl. By using curl you whould get some and weird json data.</p>
+<pre tabindex="0"><code>nc 35.198.183.125 31604
+asdf
+&lt;head&gt;&lt;/head&gt;
+&lt;title&gt;Error response&lt;/title&gt;
+
+&lt;body&gt;&lt;/body&gt;
+&lt;h1&gt;Error response&lt;/h1&gt;
+Error code 400.
+Message: Bad request syntax (&#39;asdf&#39;).
+Error code explanation: 400 = Bad request syntax or unsupported method.
+</code></pre><p>So the natural thing is to use curl. By using curl you whould get some and weird json data.</p>
             
           
         </div>
@@ -542,12 +513,15 @@
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<p><img src="attachments/_page_19_Picture_2.jpeg" alt=""></p>
-<h3 id="dctf857ee5051eeccf7cbdfa0ab9986d32f89158429fc12348e15419a969ddcb6bfb">
-  <strong>dctf{857ee5051eeccf7cbdfa0ab9986d32f89158429fc12348e15419a969ddcb6bfb}</strong>
-  <a href="#dctf857ee5051eeccf7cbdfa0ab9986d32f89158429fc12348e15419a969ddcb6bfb" class="h-anchor" aria-hidden="true">#</a>
-</h3>
-<h3 id="summary-of-the-vulnerabilities-identified">
+
+  <figure class="left" >
+    <img src="/posts/dctf2020/attachments/_page_19_Picture_2.jpeg"   />
+    
+  </figure>
+
+
+<pre tabindex="0"><code>dctf{857ee5051eeccf7cbdfa0ab9986d32f89158429fc12348e15419a969ddcb6bfb}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
@@ -613,8 +587,8 @@
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<p>ctf{1b8fa7f33da67dfeb1d5f79850dcf13630b5563e98566bf7b76281d409d728c6}</p>
-<h3 id="summary-of-the-vulnerabilities-identified">
+<pre tabindex="0"><code>ctf{1b8fa7f33da67dfeb1d5f79850dcf13630b5563e98566bf7b76281d409d728c6}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
@@ -680,8 +654,8 @@
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<p>FLAG = CTF{75df3454a132fcdd37d94882e343c6a23e961ed70f8dd88195345aa874c63e63}</p>
-<h3 id="summary-of-the-vulnerabilities-identified">
+<pre tabindex="0"><code>CTF{75df3454a132fcdd37d94882e343c6a23e961ed70f8dd88195345aa874c63e63}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
@@ -742,52 +716,16 @@
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<table>
-  <thead>
-      <tr>
-          <th></th>
-          <th></th>
-          <th>01660706613050         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         000007061         00007061         00007061</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td></td>
-          <td>Bodderfore:304-3]         Cold XHF from from from SoftWork:34x3 () 0x560706423648         1.5 0x04111           SoftWork:31xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td></td>
-          <td>msderodec3865f (dby)]         20           coderodec3865f (dby)]         20           coderodec3865f (dby)]         20           msderodec3865f (dby)]         21           msderodec3865f (dby)]         21           msderodec3865f (dby)]         21           msderodec3865f (dby)         21           msderodec3865f (dby)         21           msderodec3865f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td></td>
-          <td>0x560706c35072 [dbt]           0x560706c35072 [dbt]           0x560706c35072 (dbt]           0x560706c35072 488040377640. tea rax, [sym.care::ptr::drop_(n_place::h14b254b3868f5bb2]           0x560706c35092 48804c34083. tea rdx, [var_s607]           0x560706c35092 48804c34083. tea rdx, [var_s607]           0x560706c35092 6000 [m 0 000676c35685</td>
-      </tr>
-      <tr>
-          <td></td>
-          <td></td>
-          <td>0.569760:35685 [of:a]<!-- raw HTML omitted -->; (OCS.3985 Trom from, from, 507.562786233867<!-- raw HTML omitted -->scientifications: ebility jup exclamation ebility</td>
-      </tr>
-      <tr>
-          <td><!-- raw HTML omitted -->:&gt; dso ctf{ddba6614a32 hit breakpoint :&gt;<!-- raw HTML omitted --></td>
-          <td>2456631c125eb1a4327c52686c71d909a92ec05ea5eb510eae81d9}<!-- raw HTML omitted -->at: 0x560760c3505d</td>
-          <td></td>
-      </tr>
-  </tbody>
-</table>
-<h3 id="ctfddba6614a32456631c125eb1a4327c52686c71d909a92ec05ea5eb510eae81d9">
-  <strong>ctf{ddba6614a32456631c125eb1a4327c52686c71d909a92ec05ea5eb510eae81d9}</strong>
-  <a href="#ctfddba6614a32456631c125eb1a4327c52686c71d909a92ec05ea5eb510eae81d9" class="h-anchor" aria-hidden="true">#</a>
-</h3>
-<h3 id="summary-of-the-vulnerabilities-identified">
+<pre tabindex="0"><code>01660706613050         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         000007061         00007061         00007061
+</code></pre><pre tabindex="0"><code>Bodderfore:304-3]         Cold XHF from from from SoftWork:34x3 () 0x560706423648         1.5 0x04111           SoftWork:31xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+</code></pre><pre tabindex="0"><code>msderodec3865f (dby)]         20           coderodec3865f (dby)]         20           coderodec3865f (dby)]         20           msderodec3865f (dby)]         21           msderodec3865f (dby)]         21           msderodec3865f (dby)]         21           msderodec3865f (dby)         21           msderodec3865f (dby)         21           msderodec3865f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21
+</code></pre><pre tabindex="0"><code>0x560706c35072 [dbt]           0x560706c35072 [dbt]           0x560706c35072 (dbt]           0x560706c35072 488040377640. tea rax, [sym.care::ptr::drop_(n_place::h14b254b3868f5bb2]           0x560706c35092 48804c34083. tea rdx, [var_s607]           0x560706c35092 48804c34083. tea rdx, [var_s607]           0x560706c35092 6000 [m 0 000676c35685
+</code></pre><pre tabindex="0"><code>0.569760:35685 [of:a]
+; (OCS.3985 Trom from, from, 507.562786233867
+scientifications: ebility jup exclamation ebility
+</code></pre><pre tabindex="0"><code>:&gt; dso ctf{ddba6614a32 hit breakpoint :&gt;
+</code></pre><pre tabindex="0"><code>ctf{ddba6614a32456631c125eb1a4327c52686c71d909a92ec05ea5eb510eae81d9}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
@@ -841,8 +779,8 @@
           
             
               <p><strong>MODERN LOGIN Proof of flag</strong></p>
-<p>FLAG = ctf{356c5e791de08610b8e9cb00a64d16c2cfc2be00b133fdfa5198420214909cc1}</p>
-<h3 id="summary-of-the-vulnerabilities-identified">
+<pre tabindex="0"><code>ctf{356c5e791de08610b8e9cb00a64d16c2cfc2be00b133fdfa5198420214909cc1}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
@@ -903,8 +841,8 @@
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<p>CTF{2b2e8580cdf35896d75bfc4b1bafff6ee90f6c525da3b9a26dd7726bf2171396}</p>
-<h3 id="summary-of-the-vulnerabilities-identified">
+<pre tabindex="0"><code>CTF{2b2e8580cdf35896d75bfc4b1bafff6ee90f6c525da3b9a26dd7726bf2171396}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
@@ -970,8 +908,8 @@
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<p>ctf{a4e394ae892144a54c008a3b480a1b22a6b64dd26c4b0c9eba498330f511b51e}</p>
-<h3 id="summary-of-the-vulnerabilities-identified">
+<pre tabindex="0"><code>ctf{a4e394ae892144a54c008a3b480a1b22a6b64dd26c4b0c9eba498330f511b51e}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
@@ -1043,8 +981,8 @@ stripped
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<p>ctf{32849dd9d7e7b313c214a7b1d004b776b4af0cedd9730e6ca05ef725a18e38e1}</p>
-<h3 id="summary-of-the-vulnerabilities-identified">
+<pre tabindex="0"><code>ctf{32849dd9d7e7b313c214a7b1d004b776b4af0cedd9730e6ca05ef725a18e38e1}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
@@ -1110,8 +1048,8 @@ stripped
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<p>DCTF{74a0f35841dfa7eddf5a87467c90da335132ae52c58ca440f31a53483cef7eac}</p>
-<h3 id="summary-of-the-vulnerabilities-identified">
+<pre tabindex="0"><code>DCTF{74a0f35841dfa7eddf5a87467c90da335132ae52c58ca440f31a53483cef7eac}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
@@ -1178,8 +1116,8 @@ stripped
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<p>ctf{79f107231696395c004e87dd7709d3990f0d602a57e9f56ac428b31138bda258}</p>
-<h3 id="summary-of-the-vulnerabilities-identified">
+<pre tabindex="0"><code>ctf{79f107231696395c004e87dd7709d3990f0d602a57e9f56ac428b31138bda258}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
@@ -1245,145 +1183,24 @@ stripped
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<table>
-  <thead>
-      <tr>
-          <th>pwndbg&gt; x/69c</th>
-          <th>0×4c55f2</th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>0×4c55f2:</td>
-          <td>99 &lsquo;c&rsquo;</td>
-          <td>116 &rsquo;t'</td>
-          <td>102 &lsquo;f&rsquo;</td>
-          <td>123 &lsquo;{&rsquo;</td>
-          <td>48 &lsquo;0&rsquo;</td>
-          <td>57 &lsquo;9&rsquo;</td>
-          <td>54 &lsquo;6&rsquo;</td>
-          <td>50 &lsquo;2&rsquo;</td>
-      </tr>
-      <tr>
-          <td>0×4c55fa:</td>
-          <td>51 &lsquo;3&rsquo;</td>
-          <td>57 &lsquo;9&rsquo;</td>
-          <td>51 &lsquo;3&rsquo;</td>
-          <td>99 &lsquo;c&rsquo;</td>
-          <td>101 &rsquo;e'</td>
-          <td>51 &lsquo;3&rsquo;</td>
-          <td>56 &lsquo;8&rsquo;</td>
-          <td>48 &lsquo;0&rsquo;</td>
-      </tr>
-      <tr>
-          <td>0×4c5602:</td>
-          <td>99 &lsquo;c&rsquo;</td>
-          <td>51 &lsquo;3&rsquo;</td>
-          <td>99 &lsquo;c&rsquo;</td>
-          <td>102 &lsquo;f&rsquo;</td>
-          <td>54 &lsquo;6&rsquo;</td>
-          <td>57 &lsquo;9&rsquo;</td>
-          <td>54 &lsquo;6&rsquo;</td>
-          <td>99 &lsquo;c&rsquo;</td>
-      </tr>
-      <tr>
-          <td>0×4c560a:</td>
-          <td>54 &lsquo;6&rsquo;</td>
-          <td>99 &lsquo;c&rsquo;</td>
-          <td>53 &lsquo;5&rsquo;</td>
-          <td>57 &lsquo;9&rsquo;</td>
-          <td>97 &lsquo;a&rsquo;</td>
-          <td>48 &lsquo;0&rsquo;</td>
-          <td>56 &lsquo;8&rsquo;</td>
-          <td>53 &lsquo;5&rsquo;</td>
-      </tr>
-      <tr>
-          <td>0×4c5612:</td>
-          <td>99 &lsquo;c&rsquo;</td>
-          <td>100 &rsquo;d'</td>
-          <td>101 &rsquo;e'</td>
-          <td>48 &lsquo;0&rsquo;</td>
-          <td>102 &lsquo;f&rsquo;</td>
-          <td>55 &lsquo;7&rsquo;</td>
-          <td>101 &rsquo;e'</td>
-          <td>100 &rsquo;d'</td>
-      </tr>
-      <tr>
-          <td>0×4c561a:</td>
-          <td>100 &rsquo;d'</td>
-          <td>49 &lsquo;1&rsquo;</td>
-          <td>51 &lsquo;3&rsquo;</td>
-          <td>56 &lsquo;8&rsquo;</td>
-          <td>50 &lsquo;2&rsquo;</td>
-          <td>102 &lsquo;f&rsquo;</td>
-          <td>50 &lsquo;2&rsquo;</td>
-          <td>101 &rsquo;e'</td>
-      </tr>
-      <tr>
-          <td>0×4c5622:</td>
-          <td>57 &lsquo;9&rsquo;</td>
-          <td>48 &lsquo;0&rsquo;</td>
-          <td>57 &lsquo;9&rsquo;</td>
-          <td>48 &lsquo;0&rsquo;</td>
-          <td>50 &lsquo;2&rsquo;</td>
-          <td>50 &lsquo;2&rsquo;</td>
-          <td>48 &lsquo;0&rsquo;</td>
-          <td>97 &lsquo;a&rsquo;</td>
-      </tr>
-      <tr>
-          <td>0×4c562a:</td>
-          <td>98 &lsquo;b&rsquo;</td>
-          <td>100 &rsquo;d'</td>
-          <td>102 &lsquo;f&rsquo;</td>
-          <td>57 &lsquo;9&rsquo;</td>
-          <td>97 &lsquo;a&rsquo;</td>
-          <td>54 &lsquo;6&rsquo;</td>
-          <td>51 &lsquo;3&rsquo;</td>
-          <td>57 &lsquo;9&rsquo;</td>
-      </tr>
-      <tr>
-          <td>0×4c5632:</td>
-          <td>54 &lsquo;6&rsquo;</td>
-          <td>99 &lsquo;c&rsquo;</td>
-          <td>56 &lsquo;8&rsquo;</td>
-          <td>56 &lsquo;8&rsquo;</td>
-          <td>125 &lsquo;}&rsquo;</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>pwndbg&gt; x/1s</td>
-          <td>0×4c55f2</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>0×4c55f2:</td>
-          <td>&ldquo;ctf{090</td>
-          <td>52393ce3</td>
-          <td>80c3cf69</td>
-          <td>6c6c59a0</td>
-          <td>85cde0f7</td>
-          <td>edd1382f</td>
-          <td>2e9090220</td>
-          <td>0abdf9a6396c88</td>
-      </tr>
-  </tbody>
-</table>
-<p>ctf{0962393ce380c3cf696c6c59a085cde0f7edd1382f2e9090220abdf9a6396c88}</p>
+<pre tabindex="0"><code>pwndbg&gt; x/69c 0x4c55f2
+0x4c55f2: 99 &#39;c&#39; 116 &#39;t&#39; 102 &#39;f&#39; 123 &#39;{&#39; 48 &#39;0&#39; 57 &#39;9&#39; 54 &#39;6&#39; 50 &#39;2&#39;
+0x4c55fa: 51 &#39;3&#39; 57 &#39;9&#39; 51 &#39;3&#39; 99 &#39;c&#39; 101 &#39;e&#39; 51 &#39;3&#39; 56 &#39;8&#39; 48 &#39;0&#39;
+0x4c5602: 99 &#39;c&#39; 51 &#39;3&#39; 99 &#39;c&#39; 102 &#39;f&#39; 54 &#39;6&#39; 57 &#39;9&#39; 54 &#39;6&#39; 99 &#39;c&#39;
+0x4c560a: 54 &#39;6&#39; 99 &#39;c&#39; 53 &#39;5&#39; 57 &#39;9&#39; 97 &#39;a&#39; 48 &#39;0&#39; 56 &#39;8&#39; 53 &#39;5&#39;
+0x4c5612: 99 &#39;c&#39; 100 &#39;d&#39; 101 &#39;e&#39; 48 &#39;0&#39; 102 &#39;f&#39; 55 &#39;7&#39; 101 &#39;e&#39; 100 &#39;d&#39;
+0x4c561a: 100 &#39;d&#39; 49 &#39;1&#39; 51 &#39;3&#39; 56 &#39;8&#39; 50 &#39;2&#39; 102 &#39;f&#39; 50 &#39;2&#39; 101 &#39;e&#39;
+0x4c5622: 57 &#39;9&#39; 48 &#39;0&#39; 57 &#39;9&#39; 48 &#39;0&#39; 50 &#39;2&#39; 50 &#39;2&#39; 48 &#39;0&#39; 97 &#39;a&#39;
+0x4c562a: 98 &#39;b&#39; 100 &#39;d&#39; 102 &#39;f&#39; 57 &#39;9&#39; 97 &#39;a&#39; 54 &#39;6&#39; 51 &#39;3&#39; 57 &#39;9&#39;
+0x4c5632: 54 &#39;6&#39; 99 &#39;c&#39; 56 &#39;8&#39; 56 &#39;8&#39; 125 &#39;}&#39;
+pwndbg&gt; x/1s 0x4c55f2
+0x4c55f2: &#34;ctf{09052393ce380c3cf696c6c59a085cde0f7edd1382f2e90902200abdf9a6396c88&#34;
+</code></pre><pre tabindex="0"><code>ctf{0962393ce380c3cf696c6c59a085cde0f7edd1382f2e9090220abdf9a6396c88}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>Following the execution of the binary in gdb, I found a &ldquo;memequal&rdquo; call having as parameters the input string and the flag in memory.</p>
             
           
         </div>

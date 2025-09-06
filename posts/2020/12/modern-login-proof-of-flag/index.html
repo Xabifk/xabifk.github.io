@@ -12,8 +12,7 @@
 <meta
   name="description"
   content="MODERN LOGIN Proof of flag
-FLAG = ctf{356c5e791de08610b8e9cb00a64d16c2cfc2be00b133fdfa5198420214909cc1}
-Summary of the vulnerabilities identified # Challenge APK file can be easily decompiled using online services, scrolling through source files and assets we notice a mp3 which is not playable. Running file command on it we observe it is an archive, we decompress it and find obfuscated Python code. Cleaning up the code we start decoding the obfuscated strings in it and one of them is our flag.
+ctf{356c5e791de08610b8e9cb00a64d16c2cfc2be00b133fdfa5198420214909cc1} Summary of the vulnerabilities identified # Challenge APK file can be easily decompiled using online services, scrolling through source files and assets we notice a mp3 which is not playable. Running file command on it we observe it is an archive, we decompress it and find obfuscated Python code. Cleaning up the code we start decoding the obfuscated strings in it and one of them is our flag.
 "
 />
 <meta
@@ -52,8 +51,7 @@ Summary of the vulnerabilities identified # Challenge APK file can be easily dec
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="MODERN LOGIN Proof of flag">
   <meta name="twitter:description" content="MODERN LOGIN Proof of flag
-FLAG = ctf{356c5e791de08610b8e9cb00a64d16c2cfc2be00b133fdfa5198420214909cc1}
-Summary of the vulnerabilities identified # Challenge APK file can be easily decompiled using online services, scrolling through source files and assets we notice a mp3 which is not playable. Running file command on it we observe it is an archive, we decompress it and find obfuscated Python code. Cleaning up the code we start decoding the obfuscated strings in it and one of them is our flag.">
+ctf{356c5e791de08610b8e9cb00a64d16c2cfc2be00b133fdfa5198420214909cc1} Summary of the vulnerabilities identified # Challenge APK file can be easily decompiled using online services, scrolling through source files and assets we notice a mp3 which is not playable. Running file command on it we observe it is an archive, we decompress it and find obfuscated Python code. Cleaning up the code we start decoding the obfuscated strings in it and one of them is our flag.">
 
 
 
@@ -61,8 +59,7 @@ Summary of the vulnerabilities identified # Challenge APK file can be easily dec
   <meta property="og:site_name" content="Xabifk">
   <meta property="og:title" content="MODERN LOGIN Proof of flag">
   <meta property="og:description" content="MODERN LOGIN Proof of flag
-FLAG = ctf{356c5e791de08610b8e9cb00a64d16c2cfc2be00b133fdfa5198420214909cc1}
-Summary of the vulnerabilities identified # Challenge APK file can be easily decompiled using online services, scrolling through source files and assets we notice a mp3 which is not playable. Running file command on it we observe it is an archive, we decompress it and find obfuscated Python code. Cleaning up the code we start decoding the obfuscated strings in it and one of them is our flag.">
+ctf{356c5e791de08610b8e9cb00a64d16c2cfc2be00b133fdfa5198420214909cc1} Summary of the vulnerabilities identified # Challenge APK file can be easily decompiled using online services, scrolling through source files and assets we notice a mp3 which is not playable. Running file command on it we observe it is an archive, we decompress it and find obfuscated Python code. Cleaning up the code we start decoding the obfuscated strings in it and one of them is our flag.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -249,8 +246,8 @@ Summary of the vulnerabilities identified # Challenge APK file can be easily dec
     <div class="post-content">
       
       <p><strong>MODERN LOGIN Proof of flag</strong></p>
-<p>FLAG = ctf{356c5e791de08610b8e9cb00a64d16c2cfc2be00b133fdfa5198420214909cc1}</p>
-<h3 id="summary-of-the-vulnerabilities-identified">
+<pre tabindex="0"><code>ctf{356c5e791de08610b8e9cb00a64d16c2cfc2be00b133fdfa5198420214909cc1}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
@@ -260,105 +257,56 @@ Summary of the vulnerabilities identified # Challenge APK file can be easily dec
   <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
 </h3>
 <p>We begin by decompiling the challenge apk using a basic free online service.</p>
-<p><img src="attachments/_page_26_Picture_0.jpeg" alt=""></p>
+
+  <figure class="left" >
+    <img src="/posts/dctf2020/attachments/_page_26_Picture_0.jpeg"   />
+    
+  </figure>
+
+
 <p>After downloading the resulting archive we can start looking through the source files, see what libraries are used etc. However that turned out to be a rabbit hole and we noticed that there is a single mp3 file in the assets folder which we thought was corrupted. But running the file command on it we find out it is actually a</p>
-<table>
-  <thead>
-      <tr>
-          <th>anna 🦻 🥵</th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>sleshwave@DESKTOP</td>
-          <td>-70BJVT3:/mnt/</td>
-          <td>/d/CTFs/dctf_2020/mod</td>
-          <td>ern_login/assets</td>
-          <td>file private.mp3</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>private.mp3: gzip</td>
-          <td>compressed da</td>
-          <td>ata, was &ldquo;private.mp3</td>
-          <td>&ldquo;, last modified:</td>
-          <td>Wed Nov 4 14:28:05</td>
-          <td>2020, max compression</td>
-      </tr>
-      <tr>
-          <td>sleshwave@DESKTOP</td>
-          <td>-70BJVT3:/mnt/</td>
-          <td>/d/CTFs/dctf_2020/mod</td>
-          <td>ern_login/assets$</td>
-          <td></td>
-          <td></td>
-      </tr>
-  </tbody>
-</table>
-<p>gzip archive.</p>
+<pre tabindex="0"><code>sleshwave@DESKTOP-70BJVT3:/mnt/d/CTFs/dctf_2020/modern_login/assets file private.mp3
+private.mp3: gzip compressed data, was &#34;private.mp3&#34;, last modified: Wed Nov 4 14:28:05 2020, max compression
+sleshwave@DESKTOP-70BJVT3:/mnt/d/CTFs/dctf_2020/modern_login/assets$
+</code></pre><p>gzip archive.</p>
 <p>After changing it to have a .gz extension we can use &ldquo;gzip -d private.gz&rdquo; to decompress it and find out that it contained only a tar file in it.</p>
-<table>
-  <thead>
-      <tr>
-          <th>inchoi e pago co (pago Serbighiano) Sy</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>sleshwave@DESKTOP-70BJVT3:/mnt/d/CTFs/dctf_2020/modern_login/assets$ gzip -d pri^C</td>
-      </tr>
-      <tr>
-          <td>sleshwave@DESKTOP-70BJVT3:/mnt/d/CTFs/dctf_2020/modern_login/assets$ mv private.mp3 private.gz</td>
-      </tr>
-      <tr>
-          <td>sleshwave@DESKTOP-70BJVT3:/mnt/d/CTFs/dctf_2020/modern_login/assets$ gzip -d private.gz</td>
-      </tr>
-      <tr>
-          <td><!-- raw HTML omitted -->sleshwave@DESKTOP-70BJVT3:/mnt/d/CTFs/dctf_2020/modern_login/assets$ ls -la<!-- raw HTML omitted --></td>
-      </tr>
-      <tr>
-          <td>total 44884</td>
-      </tr>
-      <tr>
-          <td>drwxrwxrwx 1 sleshwave sleshwave 512 Dec 7 18:37</td>
-      </tr>
-      <tr>
-          <td>drwxrwxrwx 1 sleshwave sleshwave 512 Dec 5 19:40 🚬</td>
-      </tr>
-      <tr>
-          <td>drwxrwxrwx 1 sleshwave sleshwave 512 Jan 1 1970 python bundle</td>
-      </tr>
-      <tr>
-          <td>-rwxrwxrwx 1 sleshwave sleshwave 2980 Dec 7 18:21 main.py</td>
-      </tr>
-      <tr>
-          <td>-rwxrwxrwx 1 sleshwave sleshwave 85 Nov 4 16:28 p4a_env_vars.txt</td>
-      </tr>
-      <tr>
-          <td>-rwxrwxrwx 1 sleshwave sleshwave 22978560 Dec 7 18:36 private</td>
-      </tr>
-      <tr>
-          <td>-rwxrwxrwx 1 sleshwave sleshwave 22978560 Dec 5 09:37 private.tar</td>
-      </tr>
-      <tr>
-          <td>-rwxrwxrwx 1 sleshwave sleshwave 98 Nov 4 16:28 sitecustomize.py</td>
-      </tr>
-      <tr>
-          <td></td>
-      </tr>
-  </tbody>
-</table>
-<p><img src="attachments/_page_27_Figure_0.jpeg" alt=""></p>
+<pre tabindex="0"><code>sleshwave@DESKTOP-70BJVT3:/mnt/d/CTFs/dctf_2020/modern_login/assets$ gzip -d pri^C
+sleshwave@DESKTOP-70BJVT3:/mnt/d/CTFs/dctf_2020/modern_login/assets$ mv private.mp3 private.gz
+sleshwave@DESKTOP-70BJVT3:/mnt/d/CTFs/dctf_2020/modern_login/assets$ gzip -d private.gz
+sleshwave@DESKTOP-70BJVT3:/mnt/d/CTFs/dctf_2020/modern_login/assets$ ls -la
+total 44884
+drwxrwxrwx 1 sleshwave sleshwave 512 Dec 7 18:37 .
+drwxrwxrwx 1 sleshwave sleshwave 512 Dec 5 19:40 ..
+drwxrwxrwx 1 sleshwave sleshwave 512 Jan 1 1970 python bundle
+-rwxrwxrwx 1 sleshwave sleshwave 2980 Dec 7 18:21 main.py
+-rwxrwxrwx 1 sleshwave sleshwave 85 Nov 4 16:28 p4a_env_vars.txt
+-rwxrwxrwx 1 sleshwave sleshwave 22978560 Dec 7 18:36 private
+-rwxrwxrwx 1 sleshwave sleshwave 22978560 Dec 5 09:37 private.tar
+-rwxrwxrwx 1 sleshwave sleshwave 98 Nov 4 16:28 sitecustomize.py
+</code></pre>
+  <figure class="left" >
+    <img src="/posts/dctf2020/attachments/_page_27_Figure_0.jpeg"   />
+    
+  </figure>
+
+
 <p>Now we are left with what seems to be a simple python project made for android with some dependencies. We can already tell we are interested only in the main.py file and maybe sitecustomize.py/p4a_env_vars.txt files but these last 2 turned out to be useless.</p>
-<p><img src="attachments/_page_27_Picture_2.jpeg" alt=""></p>
+
+  <figure class="left" >
+    <img src="/posts/dctf2020/attachments/_page_27_Picture_2.jpeg"   />
+    
+  </figure>
+
+
 <p>Looking through main.py we can see it is a heavily obfuscated file and that our first priority should be to deobfuscate it and make it run on our system (basically remove unnecessary</p>
 <p>dependencies).</p>
-<p><img src="attachments/_page_28_Picture_1.jpeg" alt=""></p>
+
+  <figure class="left" >
+    <img src="/posts/dctf2020/attachments/_page_28_Picture_1.jpeg"   />
+    
+  </figure>
+
+
 <p>In order to deobfuscate it, we start by renaming variables and function names, cleaning up function calls. We then remove the unneeded imports, replace the functions. We also realise that there were some input fields that were used for changing the code flow (the if on line 25) and that the flag is stored in the g variable (its the one that gets printed if the &ldquo;if&rdquo; call is True). After all these steps the deobfuscated code looks something like this:</p>
 <p>Running this deobfuscated code we get the flag.</p>
 

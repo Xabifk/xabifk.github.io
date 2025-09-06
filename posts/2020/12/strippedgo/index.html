@@ -11,8 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta
   name="description"
-  content=" STRIPPEDGO # Proof of flag # ctf{a4e394ae892144a54c008a3b480a1b22a6b64dd26c4b0c9eba498330f511b51e}
-Summary of the vulnerabilities identified # Seek to the main of the program (sym.go.main.main) and extract the string before it gets encrypted
+  content=" STRIPPEDGO # Proof of flag # ctf{a4e394ae892144a54c008a3b480a1b22a6b64dd26c4b0c9eba498330f511b51e} Summary of the vulnerabilities identified # Seek to the main of the program (sym.go.main.main) and extract the string before it gets encrypted
 Proof of solving # We start off by running file
 $ file rev_strippedGo_strippedGO rev_strippedGo_strippedGO: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, Go BuildID=pbHcqNyu7oMwNz2AOwlC/ipoepuEEs9kTpe_InyYc/zxH96PaxbdfxJ2l96QnT/-SUbqa7STSlM69LnCs6A, stripped So it&rsquo;s a go binary and it&rsquo;s stripped, at least the title didn&rsquo;t lie to us. We open it up in radare.
 "
@@ -52,8 +51,7 @@ $ file rev_strippedGo_strippedGO rev_strippedGo_strippedGO: ELF 64-bit LSB execu
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="STRIPPEDGO">
-  <meta name="twitter:description" content="STRIPPEDGO # Proof of flag # ctf{a4e394ae892144a54c008a3b480a1b22a6b64dd26c4b0c9eba498330f511b51e}
-Summary of the vulnerabilities identified # Seek to the main of the program (sym.go.main.main) and extract the string before it gets encrypted
+  <meta name="twitter:description" content="STRIPPEDGO # Proof of flag # ctf{a4e394ae892144a54c008a3b480a1b22a6b64dd26c4b0c9eba498330f511b51e} Summary of the vulnerabilities identified # Seek to the main of the program (sym.go.main.main) and extract the string before it gets encrypted
 Proof of solving # We start off by running file
 $ file rev_strippedGo_strippedGO rev_strippedGo_strippedGO: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, Go BuildID=pbHcqNyu7oMwNz2AOwlC/ipoepuEEs9kTpe_InyYc/zxH96PaxbdfxJ2l96QnT/-SUbqa7STSlM69LnCs6A, stripped So it’s a go binary and it’s stripped, at least the title didn’t lie to us. We open it up in radare.">
 
@@ -62,8 +60,7 @@ $ file rev_strippedGo_strippedGO rev_strippedGo_strippedGO: ELF 64-bit LSB execu
 <meta property="og:url" content="/posts/2020/12/strippedgo/">
   <meta property="og:site_name" content="Xabifk">
   <meta property="og:title" content="STRIPPEDGO">
-  <meta property="og:description" content="STRIPPEDGO # Proof of flag # ctf{a4e394ae892144a54c008a3b480a1b22a6b64dd26c4b0c9eba498330f511b51e}
-Summary of the vulnerabilities identified # Seek to the main of the program (sym.go.main.main) and extract the string before it gets encrypted
+  <meta property="og:description" content="STRIPPEDGO # Proof of flag # ctf{a4e394ae892144a54c008a3b480a1b22a6b64dd26c4b0c9eba498330f511b51e} Summary of the vulnerabilities identified # Seek to the main of the program (sym.go.main.main) and extract the string before it gets encrypted
 Proof of solving # We start off by running file
 $ file rev_strippedGo_strippedGO rev_strippedGo_strippedGO: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, Go BuildID=pbHcqNyu7oMwNz2AOwlC/ipoepuEEs9kTpe_InyYc/zxH96PaxbdfxJ2l96QnT/-SUbqa7STSlM69LnCs6A, stripped So it’s a go binary and it’s stripped, at least the title didn’t lie to us. We open it up in radare.">
   <meta property="og:locale" content="en">
@@ -259,8 +256,8 @@ $ file rev_strippedGo_strippedGO rev_strippedGo_strippedGO: ELF 64-bit LSB execu
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<p>ctf{a4e394ae892144a54c008a3b480a1b22a6b64dd26c4b0c9eba498330f511b51e}</p>
-<h3 id="summary-of-the-vulnerabilities-identified">
+<pre tabindex="0"><code>ctf{a4e394ae892144a54c008a3b480a1b22a6b64dd26c4b0c9eba498330f511b51e}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
@@ -276,171 +273,46 @@ linked, Go
 BuildID=pbHcqNyu7oMwNz2AOwlC/ipoepuEEs9kTpe_InyYc/zxH96PaxbdfxJ2l96QnT/-SUbqa7STSlM69LnCs6A,
 stripped
 </code></pre><p>So it&rsquo;s a go binary and it&rsquo;s stripped, at least the title didn&rsquo;t lie to us. We open it up in radare.</p>
-<p><img src="attachments/_page_10_Picture_9.jpeg" alt=""></p>
+
+  <figure class="left" >
+    <img src="/posts/dctf2020/attachments/_page_10_Picture_9.jpeg"   />
+    
+  </figure>
+
+
 <p>I started seeking until I found something interesting</p>
 <p>I ended up in sym.go.main.main</p>
-<table>
-  <thead>
-      <tr>
-          <th>0/00400210</th>
-          <th>4000402400</th>
-          <th>mos divora Francis rev</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>0x0049b1fe</td>
-          <td>488d4c2460</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>0x0049b203</td>
-          <td></td>
-          <td>mov qword [var_18h], rcx</td>
-      </tr>
-      <tr>
-          <td>0x0049b208</td>
-          <td></td>
-          <td>mov qword [var_18h], 1</td>
-      </tr>
-      <tr>
-          <td>0x0049b211</td>
-          <td></td>
-          <td>mov qword [var_20h], 1</td>
-      </tr>
-      <tr>
-          <td>0x0049b21a</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>0x0049b21f</td>
-          <td>488d442440</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>0x0049b224</td>
-          <td></td>
-          <td>mov qword [rsp], rax</td>
-      </tr>
-      <tr>
-          <td>0x0049b228</td>
-          <td>488d05369202.</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>0x0049b22f</td>
-          <td></td>
-          <td>mov qword [var_8h], rax</td>
-      </tr>
-      <tr>
-          <td>0x0049b234</td>
-          <td></td>
-          <td>mov qword [var_10h], 0x20 ; [0x20:8]=-1 ; 32</td>
-      </tr>
-      <tr>
-          <td>0x0049b23d</td>
-          <td>0f1f00</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>0x0049b240</td>
-          <td>e8bb04fb <!-- raw HTML omitted -->ff<!-- raw HTML omitted --></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>0x0049b245</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>0x0049b24a</td>
-          <td>488b4c2420</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>0x0049b24f</td>
-          <td>488b542428</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>0x0049b254</td>
-          <td>48890424</td>
-          <td>mov qword [rsp], rax</td>
-      </tr>
-      <tr>
-          <td>0x0049b258</td>
-          <td></td>
-          <td>mov qword [var_8h], rcx</td>
-      </tr>
-      <tr>
-          <td>0x0049b25d</td>
-          <td></td>
-          <td>mov qword [var_18h], rdx</td>
-      </tr>
-      <tr>
-          <td>0x0049b262</td>
-          <td>488d05cd5b02.</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>0x0049b269</td>
-          <td></td>
-          <td>mov qword [var_18h], rax</td>
-      </tr>
-      <tr>
-          <td>0x0049b26e</td>
-          <td></td>
-          <td>mov qword [var_20h], 0x10 ; [0x10:8]=-1 ; 16</td>
-      </tr>
-      <tr>
-          <td>0x0049b277</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>0x0049b27c</td>
-          <td>488b442428</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>0x0049b281</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>0x0049b286</td>
-          <td></td>
-          <td>mov qword [rsp], rax</td>
-      </tr>
-      <tr>
-          <td>0x0049b28a</td>
-          <td></td>
-          <td>mov qword [var_8h], rcx</td>
-      </tr>
-      <tr>
-          <td>0x0049b28f</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>0x0049b294</td>
-          <td>488b442410</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>0x0049b299</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-  </tbody>
-</table>
-<p>I don&rsquo;t know how string are stored in go but &lsquo;g01sn0tf0rsk1d1e&rsquo; seems interesting. And indeed it&rsquo;s the secret message.</p>
+<pre tabindex="0"><code>0/00400210 4000402400 mos divora Francis rev
+0x0049b1fe 488d4c2460
+0x0049b203 mov qword [var_18h], rcx
+0x0049b208 mov qword [var_18h], 1
+0x0049b211 mov qword [var_20h], 1
+0x0049b21a
+0x0049b21f 488d442440
+0x0049b224 mov qword [rsp], rax
+0x0049b228 488d05369202.
+0x0049b22f mov qword [var_8h], rax
+0x0049b234 mov qword [var_10h], 0x20 ; [0x20:8]=-1 ; 32
+0x0049b23d 0f1f00
+0x0049b240 e8bb04fb ff
+0x0049b245
+0x0049b24a 488b4c2420
+0x0049b24f 488b542428
+0x0049b254 48890424 mov qword [rsp], rax
+0x0049b258 mov qword [var_8h], rcx
+0x0049b25d mov qword [var_18h], rdx
+0x0049b262 488d05cd5b02.
+0x0049b269 mov qword [var_18h], rax
+0x0049b26e mov qword [var_20h], 0x10 ; [0x10:8]=-1 ; 16
+0x0049b277
+0x0049b27c 488b442428
+0x0049b281
+0x0049b286 mov qword [rsp], rax
+0x0049b28a mov qword [var_8h], rcx
+0x0049b28f
+0x0049b294 488b442410
+0x0049b299
+</code></pre><p>I don&rsquo;t know how string are stored in go but &lsquo;g01sn0tf0rsk1d1e&rsquo; seems interesting. And indeed it&rsquo;s the secret message.</p>
 
     </div>
     

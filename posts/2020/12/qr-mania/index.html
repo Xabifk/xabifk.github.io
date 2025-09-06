@@ -11,8 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta
   name="description"
-  content=" QR-MANIA # Proof of flag # CTF{2b2e8580cdf35896d75bfc4b1bafff6ee90f6c525da3b9a26dd7726bf2171396}
-Summary of the vulnerabilities identified # Inspecting the pcap file with wireshark I found HTTP responses with png images, each one containing a qr code, which decodes to a single character. The position of each character is inside the exif data of the corresponding image.
+  content=" QR-MANIA # Proof of flag # CTF{2b2e8580cdf35896d75bfc4b1bafff6ee90f6c525da3b9a26dd7726bf2171396} Summary of the vulnerabilities identified # Inspecting the pcap file with wireshark I found HTTP responses with png images, each one containing a qr code, which decodes to a single character. The position of each character is inside the exif data of the corresponding image.
 Proof of solving # Extract HTTP objects with wireshark from the provided .pcap file:
 "
 />
@@ -51,8 +50,7 @@ Proof of solving # Extract HTTP objects with wireshark from the provided .pcap f
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="QR-MANIA">
-  <meta name="twitter:description" content="QR-MANIA # Proof of flag # CTF{2b2e8580cdf35896d75bfc4b1bafff6ee90f6c525da3b9a26dd7726bf2171396}
-Summary of the vulnerabilities identified # Inspecting the pcap file with wireshark I found HTTP responses with png images, each one containing a qr code, which decodes to a single character. The position of each character is inside the exif data of the corresponding image.
+  <meta name="twitter:description" content="QR-MANIA # Proof of flag # CTF{2b2e8580cdf35896d75bfc4b1bafff6ee90f6c525da3b9a26dd7726bf2171396} Summary of the vulnerabilities identified # Inspecting the pcap file with wireshark I found HTTP responses with png images, each one containing a qr code, which decodes to a single character. The position of each character is inside the exif data of the corresponding image.
 Proof of solving # Extract HTTP objects with wireshark from the provided .pcap file:">
 
 
@@ -60,8 +58,7 @@ Proof of solving # Extract HTTP objects with wireshark from the provided .pcap f
 <meta property="og:url" content="/posts/2020/12/qr-mania/">
   <meta property="og:site_name" content="Xabifk">
   <meta property="og:title" content="QR-MANIA">
-  <meta property="og:description" content="QR-MANIA # Proof of flag # CTF{2b2e8580cdf35896d75bfc4b1bafff6ee90f6c525da3b9a26dd7726bf2171396}
-Summary of the vulnerabilities identified # Inspecting the pcap file with wireshark I found HTTP responses with png images, each one containing a qr code, which decodes to a single character. The position of each character is inside the exif data of the corresponding image.
+  <meta property="og:description" content="QR-MANIA # Proof of flag # CTF{2b2e8580cdf35896d75bfc4b1bafff6ee90f6c525da3b9a26dd7726bf2171396} Summary of the vulnerabilities identified # Inspecting the pcap file with wireshark I found HTTP responses with png images, each one containing a qr code, which decodes to a single character. The position of each character is inside the exif data of the corresponding image.
 Proof of solving # Extract HTTP objects with wireshark from the provided .pcap file:">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
@@ -256,8 +253,8 @@ Proof of solving # Extract HTTP objects with wireshark from the provided .pcap f
   <strong>Proof of flag</strong>
   <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<p>CTF{2b2e8580cdf35896d75bfc4b1bafff6ee90f6c525da3b9a26dd7726bf2171396}</p>
-<h3 id="summary-of-the-vulnerabilities-identified">
+<pre tabindex="0"><code>CTF{2b2e8580cdf35896d75bfc4b1bafff6ee90f6c525da3b9a26dd7726bf2171396}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
   <strong>Summary of the vulnerabilities identified</strong>
   <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
 </h3>
@@ -268,206 +265,44 @@ Proof of solving # Extract HTTP objects with wireshark from the provided .pcap f
 </h3>
 <p>Extract HTTP objects with wireshark from the provided .pcap file:</p>
 <p>Among the extracted resources, the following .png files can be found:</p>
-<p><img src="attachments/_page_13_Picture_10.jpeg" alt=""></p>
+
+  <figure class="left" >
+    <img src="/posts/dctf2020/attachments/_page_13_Picture_10.jpeg"   />
+    
+  </figure>
+
+
 <p>Each one corresponds to a character in the flag</p>
 <p>The order of the characters is contained in the EXIF data of the images</p>
-<table>
-  <thead>
-      <tr>
-          <th>~/D/d/q/resources &gt;</th>
-          <th>&raquo; exa</th>
-          <th>*.png</th>
-          <th>xargs -n1 exiftool</th>
-          <th>grep -i</th>
-          <th>&lsquo;file</th>
-          <th>name\ comment&rsquo;</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>File Name</td>
-          <td></td>
-          <td></td>
-          <td>ajxxcwfgozxpbhnauore</td>
-          <td>.png</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>Comment</td>
-          <td></td>
-          <td>:</td>
-          <td>20/69</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>File Name</td>
-          <td></td>
-          <td>:</td>
-          <td>avudtreighimhcgmwape</td>
-          <td>.png</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>Comment</td>
-          <td></td>
-          <td>:</td>
-          <td>39/69</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>File Name</td>
-          <td></td>
-          <td>:</td>
-          <td>biuwfrwgdocdypyliqyt</td>
-          <td>.png</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>Comment</td>
-          <td></td>
-          <td>:</td>
-          <td>27/69</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>File Name</td>
-          <td></td>
-          <td>:</td>
-          <td>bynatxrryamhwwhmmroj</td>
-          <td>.png</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>Comment</td>
-          <td></td>
-          <td>:</td>
-          <td>46/69</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>File Name</td>
-          <td></td>
-          <td>:</td>
-          <td>cllzodvnyvvmbppaktsd</td>
-          <td>.png</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>Comment</td>
-          <td></td>
-          <td>:</td>
-          <td>44/69</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>File Name</td>
-          <td></td>
-          <td>:</td>
-          <td>czguxctbmqgfgxhvnwzr</td>
-          <td>.png</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>Comment</td>
-          <td></td>
-          <td>:</td>
-          <td>69/69</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>File Name</td>
-          <td></td>
-          <td>:</td>
-          <td>dfhwcysjjnrnhfziizlr</td>
-          <td>.png</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>Comment</td>
-          <td></td>
-          <td>:</td>
-          <td>56/69</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>File Name</td>
-          <td></td>
-          <td>:</td>
-          <td>dglakvmqmabxcqlpgbjb</td>
-          <td>.png</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>Comment</td>
-          <td></td>
-          <td>:</td>
-          <td>45/69</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>File Name</td>
-          <td></td>
-          <td>:</td>
-          <td>dhqclnghhlrjxjmhjzon</td>
-          <td>.png</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>Comment</td>
-          <td></td>
-          <td>:</td>
-          <td>54/69</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>File Name</td>
-          <td></td>
-          <td>:</td>
-          <td>dmdkaosivnyzxyzmglai</td>
-          <td>.png</td>
-          <td></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>Comment</td>
-          <td></td>
-          <td>:</td>
-          <td>65/69</td>
-          <td></td>
-          <td></td>
-          <td></td>
-      </tr>
-  </tbody>
-</table>
-<p>Convert the images into monochrome and decode them with the pyzbar library</p>
-<p><img src="attachments/_page_14_Figure_2.jpeg" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~/D/d/q/resources &gt; exiftool *.png | xargs -n1 grep -i <span style="color:#e6db74">&#39;file name\|comment&#39;</span>
+</span></span><span style="display:flex;"><span>File Name                       : ajxxcwfgozxpbhnauore.png
+</span></span><span style="display:flex;"><span>Comment                         : 20/69
+</span></span><span style="display:flex;"><span>File Name                       : avudtreighimhcgmwape.png
+</span></span><span style="display:flex;"><span>Comment                         : 39/69
+</span></span><span style="display:flex;"><span>File Name                       : biuwfrwgdocdypyliqyt.png
+</span></span><span style="display:flex;"><span>Comment                         : 27/69
+</span></span><span style="display:flex;"><span>File Name                       : bynatxrryamhwwhmmroj.png
+</span></span><span style="display:flex;"><span>Comment                         : 46/69
+</span></span><span style="display:flex;"><span>File Name                       : cllzodvnyvvmbppaktsd.png
+</span></span><span style="display:flex;"><span>Comment                         : 44/69
+</span></span><span style="display:flex;"><span>File Name                       : czguxctbmqgfgxhvnwzr.png
+</span></span><span style="display:flex;"><span>Comment                         : 69/69
+</span></span><span style="display:flex;"><span>File Name                       : dfhwcysjjnrnhfziizlr.png
+</span></span><span style="display:flex;"><span>Comment                         : 56/69
+</span></span><span style="display:flex;"><span>File Name                       : dglakvmqmabxcqlpgbjb.png
+</span></span><span style="display:flex;"><span>Comment                         : 45/69
+</span></span><span style="display:flex;"><span>File Name                       : dhqclnghhlrjxjmhjzon.png
+</span></span><span style="display:flex;"><span>Comment                         : 54/69
+</span></span><span style="display:flex;"><span>File Name                       : dmdkaosivnyzxyzmglai.png
+</span></span><span style="display:flex;"><span>Comment                         : 65/69
+</span></span></code></pre></div><p>Convert the images into monochrome and decode them with the pyzbar library</p>
+
+  <figure class="left" >
+    <img src="/posts/dctf2020/attachments/_page_14_Figure_2.jpeg"   />
+    
+  </figure>
+
+
 
     </div>
     
