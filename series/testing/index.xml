@@ -5,21 +5,21 @@
     
     
     
-    <link>https://xabifk.com/series/testing/</link>
+    <link>/series/testing/</link>
     <description>Recent content in Testing on Xabifk</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Wed, 08 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://xabifk.com/series/testing/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/series/testing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Test post</title>
-      <link>https://xabifk.com/posts/2020/04/test-post/</link>
+      <link>/posts/2020/04/test-post/</link>
       <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://xabifk.com/posts/2020/04/test-post/</guid>
+      <guid>/posts/2020/04/test-post/</guid>
       <description>
         
           
@@ -28,11 +28,35 @@
         
         
         
-          This is just a test post # There&amp;rsquo;s really nothing to see here. I&amp;rsquo;m just a test.
-You want flags? # What are you talking about? I don&amp;rsquo;t have any flags. But why does this remind me of peanuts?
-For real, you can go away # You are wasting your time and my bandwidth.
-Follow the following steps:
-Go away Run # rm -rf / Just leave &amp;hellip; Please Still here?
+          &lt;h2 id=&#34;this-is-just-a-test-post&#34;&gt;
+  This is just a test post
+  &lt;a href=&#34;#this-is-just-a-test-post&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;There&amp;rsquo;s really nothing to see here. I&amp;rsquo;m just a test.&lt;/p&gt;
+&lt;h2 id=&#34;you-want-flags&#34;&gt;
+  You want flags?
+  &lt;a href=&#34;#you-want-flags&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;What are you talking about? I don&amp;rsquo;t have any flags.
+But why does this remind me of peanuts?&lt;/p&gt;
+&lt;h2 id=&#34;for-real-you-can-go-away&#34;&gt;
+  For real, you can go away
+  &lt;a href=&#34;#for-real-you-can-go-away&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;You are wasting your time and my bandwidth.&lt;/p&gt;
+&lt;p&gt;Follow the following steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go away&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;# rm -rf / &lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Just leave&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Please&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;still-here&#34;&gt;
+  Still here?
+  &lt;a href=&#34;#still-here&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Ok &lt;a href=&#34;https://bit.ly/2w4ItRo&#34;&gt;here&lt;/a&gt; you go. I hope it&amp;rsquo;s enough.&lt;/p&gt;
           
         
         </description>

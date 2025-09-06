@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>
+        YOPASS-GO ::
+        Xabifk
+      </title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content=" YOPASS-GO # Proof of flag # pwndbg&gt; x/69c 0×4c55f2 0×4c55f2: 99 &lsquo;c&rsquo; 116 &rsquo;t&#39; 102 &lsquo;f&rsquo; 123 &lsquo;{&rsquo; 48 &lsquo;0&rsquo; 57 &lsquo;9&rsquo; 54 &lsquo;6&rsquo; 50 &lsquo;2&rsquo; 0×4c55fa: 51 &lsquo;3&rsquo; 57 &lsquo;9&rsquo; 51 &lsquo;3&rsquo; 99 &lsquo;c&rsquo; 101 &rsquo;e&#39; 51 &lsquo;3&rsquo; 56 &lsquo;8&rsquo; 48 &lsquo;0&rsquo; 0×4c5602: 99 &lsquo;c&rsquo; 51 &lsquo;3&rsquo; 99 &lsquo;c&rsquo; 102 &lsquo;f&rsquo; 54 &lsquo;6&rsquo; 57 &lsquo;9&rsquo; 54 &lsquo;6&rsquo; 99 &lsquo;c&rsquo; 0×4c560a: 54 &lsquo;6&rsquo; 99 &lsquo;c&rsquo; 53 &lsquo;5&rsquo; 57 &lsquo;9&rsquo; 97 &lsquo;a&rsquo; 48 &lsquo;0&rsquo; 56 &lsquo;8&rsquo; 53 &lsquo;5&rsquo; 0×4c5612: 99 &lsquo;c&rsquo; 100 &rsquo;d&#39; 101 &rsquo;e&#39; 48 &lsquo;0&rsquo; 102 &lsquo;f&rsquo; 55 &lsquo;7&rsquo; 101 &rsquo;e&#39; 100 &rsquo;d&#39; 0×4c561a: 100 &rsquo;d&#39; 49 &lsquo;1&rsquo; 51 &lsquo;3&rsquo; 56 &lsquo;8&rsquo; 50 &lsquo;2&rsquo; 102 &lsquo;f&rsquo; 50 &lsquo;2&rsquo; 101 &rsquo;e&#39; 0×4c5622: 57 &lsquo;9&rsquo; 48 &lsquo;0&rsquo; 57 &lsquo;9&rsquo; 48 &lsquo;0&rsquo; 50 &lsquo;2&rsquo; 50 &lsquo;2&rsquo; 48 &lsquo;0&rsquo; 97 &lsquo;a&rsquo; 0×4c562a: 98 &lsquo;b&rsquo; 100 &rsquo;d&#39; 102 &lsquo;f&rsquo; 57 &lsquo;9&rsquo; 97 &lsquo;a&rsquo; 54 &lsquo;6&rsquo; 51 &lsquo;3&rsquo; 57 &lsquo;9&rsquo; 0×4c5632: 54 &lsquo;6&rsquo; 99 &lsquo;c&rsquo; 56 &lsquo;8&rsquo; 56 &lsquo;8&rsquo; 125 &lsquo;}&rsquo; pwndbg&gt; x/1s 0×4c55f2 0×4c55f2: &ldquo;ctf{090 52393ce3 80c3cf69 6c6c59a0 85cde0f7 edd1382f 2e9090220 0abdf9a6396c88 ctf{0962393ce380c3cf696c6c59a085cde0f7edd1382f2e9090220abdf9a6396c88}
+"
+/>
+<meta
+  name="keywords"
+  content=""
+/>
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="/posts/2020/12/yopass-go/" />
+
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css" />
+
+<link rel="stylesheet" href="/style.css" />
+
+
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="/img/apple-touch-icon-144-precomposed.png"
+/>
+<link rel="shortcut icon" href="/img/favicon.png" />
+
+
+<link href="/assets/fonts/Inter-Italic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Regular.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Medium.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-MediumItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Bold.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-BoldItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YOPASS-GO">
+  <meta name="twitter:description" content="YOPASS-GO # Proof of flag # pwndbg&gt; x/69c 0×4c55f2 0×4c55f2: 99 ‘c’ 116 ’t&#39; 102 ‘f’ 123 ‘{’ 48 ‘0’ 57 ‘9’ 54 ‘6’ 50 ‘2’ 0×4c55fa: 51 ‘3’ 57 ‘9’ 51 ‘3’ 99 ‘c’ 101 ’e&#39; 51 ‘3’ 56 ‘8’ 48 ‘0’ 0×4c5602: 99 ‘c’ 51 ‘3’ 99 ‘c’ 102 ‘f’ 54 ‘6’ 57 ‘9’ 54 ‘6’ 99 ‘c’ 0×4c560a: 54 ‘6’ 99 ‘c’ 53 ‘5’ 57 ‘9’ 97 ‘a’ 48 ‘0’ 56 ‘8’ 53 ‘5’ 0×4c5612: 99 ‘c’ 100 ’d&#39; 101 ’e&#39; 48 ‘0’ 102 ‘f’ 55 ‘7’ 101 ’e&#39; 100 ’d&#39; 0×4c561a: 100 ’d&#39; 49 ‘1’ 51 ‘3’ 56 ‘8’ 50 ‘2’ 102 ‘f’ 50 ‘2’ 101 ’e&#39; 0×4c5622: 57 ‘9’ 48 ‘0’ 57 ‘9’ 48 ‘0’ 50 ‘2’ 50 ‘2’ 48 ‘0’ 97 ‘a’ 0×4c562a: 98 ‘b’ 100 ’d&#39; 102 ‘f’ 57 ‘9’ 97 ‘a’ 54 ‘6’ 51 ‘3’ 57 ‘9’ 0×4c5632: 54 ‘6’ 99 ‘c’ 56 ‘8’ 56 ‘8’ 125 ‘}’ pwndbg&gt; x/1s 0×4c55f2 0×4c55f2: “ctf{090 52393ce3 80c3cf69 6c6c59a0 85cde0f7 edd1382f 2e9090220 0abdf9a6396c88 ctf{0962393ce380c3cf696c6c59a085cde0f7edd1382f2e9090220abdf9a6396c88}">
+
+
+
+<meta property="og:url" content="/posts/2020/12/yopass-go/">
+  <meta property="og:site_name" content="Xabifk">
+  <meta property="og:title" content="YOPASS-GO">
+  <meta property="og:description" content="YOPASS-GO # Proof of flag # pwndbg&gt; x/69c 0×4c55f2 0×4c55f2: 99 ‘c’ 116 ’t&#39; 102 ‘f’ 123 ‘{’ 48 ‘0’ 57 ‘9’ 54 ‘6’ 50 ‘2’ 0×4c55fa: 51 ‘3’ 57 ‘9’ 51 ‘3’ 99 ‘c’ 101 ’e&#39; 51 ‘3’ 56 ‘8’ 48 ‘0’ 0×4c5602: 99 ‘c’ 51 ‘3’ 99 ‘c’ 102 ‘f’ 54 ‘6’ 57 ‘9’ 54 ‘6’ 99 ‘c’ 0×4c560a: 54 ‘6’ 99 ‘c’ 53 ‘5’ 57 ‘9’ 97 ‘a’ 48 ‘0’ 56 ‘8’ 53 ‘5’ 0×4c5612: 99 ‘c’ 100 ’d&#39; 101 ’e&#39; 48 ‘0’ 102 ‘f’ 55 ‘7’ 101 ’e&#39; 100 ’d&#39; 0×4c561a: 100 ’d&#39; 49 ‘1’ 51 ‘3’ 56 ‘8’ 50 ‘2’ 102 ‘f’ 50 ‘2’ 101 ’e&#39; 0×4c5622: 57 ‘9’ 48 ‘0’ 57 ‘9’ 48 ‘0’ 50 ‘2’ 50 ‘2’ 48 ‘0’ 97 ‘a’ 0×4c562a: 98 ‘b’ 100 ’d&#39; 102 ‘f’ 57 ‘9’ 97 ‘a’ 54 ‘6’ 51 ‘3’ 57 ‘9’ 0×4c5632: 54 ‘6’ 99 ‘c’ 56 ‘8’ 56 ‘8’ 125 ‘}’ pwndbg&gt; x/1s 0×4c55f2 0×4c55f2: “ctf{090 52393ce3 80c3cf69 6c6c59a0 85cde0f7 edd1382f 2e9090220 0abdf9a6396c88 ctf{0962393ce380c3cf696c6c59a085cde0f7edd1382f2e9090220abdf9a6396c88}">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-12-31T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-12-31T00:00:00+00:00">
+    <meta property="article:tag" content="Writeup">
+    <meta property="article:tag" content="DCTF2020">
+    <meta property="article:tag" content="CTF">
+      <meta property="og:see_also" content="/posts/2020/12/alien-inclusion/">
+      <meta property="og:see_also" content="/posts/2020/12/basic-coms/">
+      <meta property="og:see_also" content="/posts/2020/12/bazooka/">
+      <meta property="og:see_also" content="/posts/2020/12/bro64/">
+      <meta property="og:see_also" content="/posts/2020/12/darkmagic/">
+      <meta property="og:see_also" content="/posts/2020/12/dumb-discord/">
+      <meta property="og:see_also" content="/posts/2020/12/http-for-pros/">
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a
+  href="/"
+  class="logo"
+  style="text-decoration: none;"
+>
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span>
+    <span class="logo__text"
+      >xabifk</span
+    >
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/posts">Posts</a></li>
+        
+      
+      
+        <ul class="menu__sub-inner">
+          <li class="menu__sub-inner-more-trigger">
+            Show more
+            <span class="menu__sub-inner-more-trigger-icon"
+              ><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span
+            >
+          </li>
+          <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="/series">Series</a></li>
+              
+            
+              
+                <li><a href="/tags">Tags</a></li>
+              
+            
+              
+                <li><a href="/archive">Timeline</a></li>
+              
+            
+          </ul>
+        </ul>
+      
+      
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/posts">Posts</a></li>
+      
+    
+      
+        <li><a href="/series">Series</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+      
+        <li><a href="/archive">Timeline</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg
+  class="theme-toggler"
+  width="24"
+  height="24"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
+  />
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h1 class="post-title">YOPASS-GO</h1>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2020-12-31
+        </span>
+
+        
+          
+        
+      
+
+      
+        <span class="post-author"
+          >— Written by Xabifk</span
+        >
+
+
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          <a href="/tags/writeup/">#writeup</a>&nbsp;
+        
+          <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+        
+          <a href="/tags/ctf/">#CTF</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+      <h2 id="yopass-go">
+  <strong>YOPASS-GO</strong>
+  <a href="#yopass-go" class="h-anchor" aria-hidden="true">#</a>
+</h2>
+<h3 id="proof-of-flag">
+  <strong>Proof of flag</strong>
+  <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th>pwndbg&gt; x/69c</th>
+          <th>0×4c55f2</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0×4c55f2:</td>
+          <td>99 &lsquo;c&rsquo;</td>
+          <td>116 &rsquo;t'</td>
+          <td>102 &lsquo;f&rsquo;</td>
+          <td>123 &lsquo;{&rsquo;</td>
+          <td>48 &lsquo;0&rsquo;</td>
+          <td>57 &lsquo;9&rsquo;</td>
+          <td>54 &lsquo;6&rsquo;</td>
+          <td>50 &lsquo;2&rsquo;</td>
+      </tr>
+      <tr>
+          <td>0×4c55fa:</td>
+          <td>51 &lsquo;3&rsquo;</td>
+          <td>57 &lsquo;9&rsquo;</td>
+          <td>51 &lsquo;3&rsquo;</td>
+          <td>99 &lsquo;c&rsquo;</td>
+          <td>101 &rsquo;e'</td>
+          <td>51 &lsquo;3&rsquo;</td>
+          <td>56 &lsquo;8&rsquo;</td>
+          <td>48 &lsquo;0&rsquo;</td>
+      </tr>
+      <tr>
+          <td>0×4c5602:</td>
+          <td>99 &lsquo;c&rsquo;</td>
+          <td>51 &lsquo;3&rsquo;</td>
+          <td>99 &lsquo;c&rsquo;</td>
+          <td>102 &lsquo;f&rsquo;</td>
+          <td>54 &lsquo;6&rsquo;</td>
+          <td>57 &lsquo;9&rsquo;</td>
+          <td>54 &lsquo;6&rsquo;</td>
+          <td>99 &lsquo;c&rsquo;</td>
+      </tr>
+      <tr>
+          <td>0×4c560a:</td>
+          <td>54 &lsquo;6&rsquo;</td>
+          <td>99 &lsquo;c&rsquo;</td>
+          <td>53 &lsquo;5&rsquo;</td>
+          <td>57 &lsquo;9&rsquo;</td>
+          <td>97 &lsquo;a&rsquo;</td>
+          <td>48 &lsquo;0&rsquo;</td>
+          <td>56 &lsquo;8&rsquo;</td>
+          <td>53 &lsquo;5&rsquo;</td>
+      </tr>
+      <tr>
+          <td>0×4c5612:</td>
+          <td>99 &lsquo;c&rsquo;</td>
+          <td>100 &rsquo;d'</td>
+          <td>101 &rsquo;e'</td>
+          <td>48 &lsquo;0&rsquo;</td>
+          <td>102 &lsquo;f&rsquo;</td>
+          <td>55 &lsquo;7&rsquo;</td>
+          <td>101 &rsquo;e'</td>
+          <td>100 &rsquo;d'</td>
+      </tr>
+      <tr>
+          <td>0×4c561a:</td>
+          <td>100 &rsquo;d'</td>
+          <td>49 &lsquo;1&rsquo;</td>
+          <td>51 &lsquo;3&rsquo;</td>
+          <td>56 &lsquo;8&rsquo;</td>
+          <td>50 &lsquo;2&rsquo;</td>
+          <td>102 &lsquo;f&rsquo;</td>
+          <td>50 &lsquo;2&rsquo;</td>
+          <td>101 &rsquo;e'</td>
+      </tr>
+      <tr>
+          <td>0×4c5622:</td>
+          <td>57 &lsquo;9&rsquo;</td>
+          <td>48 &lsquo;0&rsquo;</td>
+          <td>57 &lsquo;9&rsquo;</td>
+          <td>48 &lsquo;0&rsquo;</td>
+          <td>50 &lsquo;2&rsquo;</td>
+          <td>50 &lsquo;2&rsquo;</td>
+          <td>48 &lsquo;0&rsquo;</td>
+          <td>97 &lsquo;a&rsquo;</td>
+      </tr>
+      <tr>
+          <td>0×4c562a:</td>
+          <td>98 &lsquo;b&rsquo;</td>
+          <td>100 &rsquo;d'</td>
+          <td>102 &lsquo;f&rsquo;</td>
+          <td>57 &lsquo;9&rsquo;</td>
+          <td>97 &lsquo;a&rsquo;</td>
+          <td>54 &lsquo;6&rsquo;</td>
+          <td>51 &lsquo;3&rsquo;</td>
+          <td>57 &lsquo;9&rsquo;</td>
+      </tr>
+      <tr>
+          <td>0×4c5632:</td>
+          <td>54 &lsquo;6&rsquo;</td>
+          <td>99 &lsquo;c&rsquo;</td>
+          <td>56 &lsquo;8&rsquo;</td>
+          <td>56 &lsquo;8&rsquo;</td>
+          <td>125 &lsquo;}&rsquo;</td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>pwndbg&gt; x/1s</td>
+          <td>0×4c55f2</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>0×4c55f2:</td>
+          <td>&ldquo;ctf{090</td>
+          <td>52393ce3</td>
+          <td>80c3cf69</td>
+          <td>6c6c59a0</td>
+          <td>85cde0f7</td>
+          <td>edd1382f</td>
+          <td>2e9090220</td>
+          <td>0abdf9a6396c88</td>
+      </tr>
+  </tbody>
+</table>
+<p>ctf{0962393ce380c3cf696c6c59a085cde0f7edd1382f2e9090220abdf9a6396c88}</p>
+<h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>Following the execution of the binary in gdb, I found a &ldquo;memequal&rdquo; call having as parameters the input string and the flag in memory.</p>
+<h3 id="proof-of-solving">
+  <strong>Proof of solving</strong>
+  <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>Follow the program execution until the &ldquo;Scanln&rdquo; call and input a random string</p>
+<p><img src="attachments/_page_11_Figure_8.jpeg" alt=""></p>
+<p>Right after the scanln call there is a length check, comparing the input string length with 69</p>
+<p>Running the program again, this time with an input string of length 69, the execution eventually reaches a &ldquo;memequal&rdquo; call having as parameters the input string and the flag</p>
+<table>
+  <thead>
+      <tr>
+          <th>Bx00000000000000000 10 in /home/lucian/Desktop/ctf/yopass.go<!-- raw HTML omitted -->LEGEND: STACK   HEAP   CODE   DATA   <!-- raw HTML omitted -->BACK<!-- raw HTML omitted -->   RODATA</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>TAX #*     #*     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     # &lt;t&lt; td=&rdquo;&quot;&gt;&lt;/t&lt;&gt;</td>
+      </tr>
+      <tr>
+          <td>0+48572     cmin.main/2833     cmin.main/2835     trian.main/2835       0+485552     cmin.main/2835     cmin.main/2835     cmin.main/2835       0+485552     cmin.main/2835     cmin.main/2835     cmin.main/2835       0+485552     cmin.main/2835     cmin.main/2835     cmin.main/2835       0+485552     cmin.main/2835     cmin.main/2835     cmin.main/2835       0+485552     cmin.main/2835     cmin.main/2835     cmin.main/2835       0+485552     cmin.main/2835     cmin.main/2835     cmin.main/2835       0+485552     cmin.main/2835     cmin.main/2835     cmin.main/2835       0+485552     cmin.main/2835     cmin.main/2835     cmin.main/2835       0+485552     cmin.main/2835     cmin.main/2835     cmin.main/2835       0+485552     cmin.main/2835     cmin.main/2835     cmin.main/2835       0+485552     cmin.main/2835     cmin.main/2835     cmin.main/2835       0+485552     cmin.main/2835     cmin.main/2835     cmin.main/2835       0+485552     cmin.main/2835     cmin.main/2835     cmin.main/2835       0+485552     cmin.main/2835     cmin.main/2835     cmin.main/2835       0+485552     cmin.main/2835     cmin.main/2835     cmin.main/2835</td>
+      </tr>
+      <tr>
+          <td>0+4685[1] cmii.m.siin.321         moups nemerid (tr [rsp + +0k]), xmm8         [</td>
+      </tr>
+      <tr>
+          <td>↓<!-- raw HTML omitted -->96:9281 → 9rc(x20851f38 → 9rc(x2081c080 → 9rc(x2081c080 ↔ &lsquo;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</td>
+      </tr>
+      <tr>
+          <td>F € 4855e8 min.min+304<!-- raw HTML omitted -->F 1 427a12 runtime.min+330<!-- raw HTML omitted -->F 2 44e61 runtime.gooxit+1<!-- raw HTML omitted -->F 3 € €</td>
+      </tr>
+      <tr>
+          <td>pundbg&gt;</td>
+      </tr>
+  </tbody>
+</table>
+<p>Print 69 characters from the obtained memory location</p>
+<p><img src="attachments/_page_12_Figure_2.jpeg" alt=""></p>
+
+    </div>
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h"
+              >Read other posts</span
+            >
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="/posts/2020/12/why-xor/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">WHY-XOR</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="/posts/2020/04/test-post/">
+                  <span class="button__text">Test post</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+    
+      
+        
+
+      
+    
+  </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <a
+  href="/"
+  class="logo"
+  style="text-decoration: none;"
+>
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span>
+    <span class="logo__text"
+      >xabifk</span
+    >
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span
+          >© 2025 Powered by
+          <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span
+        >
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+  </body>
+</html>

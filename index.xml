@@ -5,21 +5,21 @@
     
     
     
-    <link>https://xabifk.com/</link>
+    <link>/</link>
     <description>Recent content on Xabifk</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 08 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <language>en</language>
+    <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://xabifk.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>About</title>
-      <link>https://xabifk.com/about/</link>
-      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
+      <title>ALIEN INCLUSION</title>
+      <link>/posts/2020/12/alien-inclusion/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://xabifk.com/about/</guid>
+      <guid>/posts/2020/12/alien-inclusion/</guid>
       <description>
         
           
@@ -28,7 +28,780 @@
         
         
         
-          A website where I&amp;rsquo;ll post stuff and things
+          &lt;h2 id=&#34;alien-inclusion&#34;&gt;
+  &lt;strong&gt;ALIEN INCLUSION&lt;/strong&gt;
+  &lt;a href=&#34;#alien-inclusion&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;proof-of-flag&#34;&gt;
+  &lt;strong&gt;Proof of flag&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-flag&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;FLAG = ctf{b513ef6d1a5735810bca608be42bda8ef28840ee458df4a3508d25e4b706134d}&lt;/p&gt;
+&lt;h3 id=&#34;summary-of-the-vulnerabilities-identified&#34;&gt;
+  &lt;strong&gt;Summary of the vulnerabilities identified&lt;/strong&gt;
+  &lt;a href=&#34;#summary-of-the-vulnerabilities-identified&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;We can control which file we are includingg using the start post parameter and we can set it to the path of the flag.php file.&lt;/p&gt;
+&lt;h3 id=&#34;proof-of-solving&#34;&gt;
+  &lt;strong&gt;Proof of solving&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-solving&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;attachments/_page_23_Picture_7.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When we first access the page we are greeted by what seems to be the source code of the index.php file. Based on this source code, the name of the challenge and its description &lt;strong&gt;&amp;ldquo;Keep it local and you should be fine. The flag is in /var/www/html/flag.php.&amp;rdquo;&lt;/strong&gt;, it is obvious we need to set the value of the &amp;ldquo;start&amp;rdquo; POST parameter to the absolute path of the flag and to also add a random value for the start GET parameter (also known as a query argument) in order to provent the exit on line 5 from ever being executed.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>BASIC COMS</title>
+      <link>/posts/2020/12/basic-coms/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020/12/basic-coms/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;h2 id=&#34;basic-coms&#34;&gt;
+  &lt;strong&gt;BASIC COMS&lt;/strong&gt;
+  &lt;a href=&#34;#basic-coms&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;proof-of-flag&#34;&gt;
+  &lt;strong&gt;Proof of flag&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-flag&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;FLAG = ctf{ca314be22457497e81a08fc3bfdbdcd3e0e443c41b5ce9802517b2161aa5e993}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;summary-of-the-vulnerabilities-identified&#34;&gt;
+  &lt;strong&gt;Summary of the vulnerabilities identified&lt;/strong&gt;
+  &lt;a href=&#34;#summary-of-the-vulnerabilities-identified&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Looking for http requests captured by Wireshark in the given file we find only 4 request, one of which contains our flag as a GET parameter.&lt;/p&gt;
+&lt;h3 id=&#34;proof-of-solving&#34;&gt;
+  &lt;strong&gt;Proof of solving&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-solving&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Based on the challenge description and title, we know we are supposed to be looking for a &amp;ldquo;basic&amp;rdquo; protocol in the pcapng file. One of the most basic protocols available is http and we in Wireshark we can filter to look only at the http requests and responses. Since there are only 4 requests made and the fact that there is a somewhat encoded message which says &amp;ldquo;The content of the flag is&amp;rdquo; we can guess that&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>BAZOOKA</title>
+      <link>/posts/2020/12/bazooka/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020/12/bazooka/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;h2 id=&#34;bazooka&#34;&gt;
+  &lt;strong&gt;BAZOOKA&lt;/strong&gt;
+  &lt;a href=&#34;#bazooka&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;proof-of-flag&#34;&gt;
+  &lt;strong&gt;Proof of flag&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-flag&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id=&#34;ctf9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b&#34;&gt;
+  &lt;strong&gt;ctf{9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b}&lt;/strong&gt;
+  &lt;a href=&#34;#ctf9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id=&#34;summary-of-the-vulnerabilities-identified&#34;&gt;
+  &lt;strong&gt;Summary of the vulnerabilities identified&lt;/strong&gt;
+  &lt;a href=&#34;#summary-of-the-vulnerabilities-identified&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Just a super simple buffer overflow(Don&amp;rsquo;t need to tell me &amp;ldquo;Try Harder&amp;rdquo; mom).&lt;/p&gt;
+&lt;h3 id=&#34;proof-of-solving&#34;&gt;
+  &lt;strong&gt;Proof of solving&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-solving&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;The program in the first part prompts the user to input &lt;em&gt;&amp;quot;#!@{try_hard3r}&amp;quot;&lt;/em&gt; to go on the vuln function, where the buffer overrun happens by using &amp;ldquo;%s&amp;rdquo; in the scanf format string and not &amp;ldquo;%&lt;strong&gt;X&lt;/strong&gt;s&amp;rdquo;, where &lt;strong&gt;X&lt;/strong&gt; is a natural number. First I find the libc base address and use an ONE Gadget to land me on an execve(&amp;quot;/bin/sh&amp;quot;, 0, 0)&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>BRO64</title>
+      <link>/posts/2020/12/bro64/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020/12/bro64/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;h2 id=&#34;bro64&#34;&gt;
+  &lt;strong&gt;BRO64&lt;/strong&gt;
+  &lt;a href=&#34;#bro64&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;proof-of-flag&#34;&gt;
+  &lt;strong&gt;Proof of flag&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-flag&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id=&#34;ctff38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0&#34;&gt;
+  &lt;strong&gt;ctf{f38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0}&lt;/strong&gt;
+  &lt;a href=&#34;#ctff38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id=&#34;summary-of-the-vulnerabilities-identified&#34;&gt;
+  &lt;strong&gt;Summary of the vulnerabilities identified&lt;/strong&gt;
+  &lt;a href=&#34;#summary-of-the-vulnerabilities-identified&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;By connecting with netcat and sending some data you would get an HTTP Bad Request Error.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;nc 35.198.183.125 31604&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;asdf&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;!-- raw HTML omitted --&gt;Error response&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;!-- raw HTML omitted --&gt;Error response&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Error code 400.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Message: Bad request syntax (&amp;lsquo;asdf&amp;rsquo;).&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Error code explanation: 400 = Bad request syntax or unsupported method.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;So the natural thing is to use curl. By using curl you whould get some and weird json data.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>DARKMAGIC</title>
+      <link>/posts/2020/12/darkmagic/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020/12/darkmagic/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;h2 id=&#34;darkmagic&#34;&gt;
+  &lt;strong&gt;DARKMAGIC&lt;/strong&gt;
+  &lt;a href=&#34;#darkmagic&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;proof-of-flag&#34;&gt;
+  &lt;strong&gt;Proof of flag&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-flag&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;attachments/_page_19_Picture_2.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;dctf857ee5051eeccf7cbdfa0ab9986d32f89158429fc12348e15419a969ddcb6bfb&#34;&gt;
+  &lt;strong&gt;dctf{857ee5051eeccf7cbdfa0ab9986d32f89158429fc12348e15419a969ddcb6bfb}&lt;/strong&gt;
+  &lt;a href=&#34;#dctf857ee5051eeccf7cbdfa0ab9986d32f89158429fc12348e15419a969ddcb6bfb&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id=&#34;summary-of-the-vulnerabilities-identified&#34;&gt;
+  &lt;strong&gt;Summary of the vulnerabilities identified&lt;/strong&gt;
+  &lt;a href=&#34;#summary-of-the-vulnerabilities-identified&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;The vulnerability was a format string + a buffer overflow.&lt;/p&gt;
+&lt;h3 id=&#34;proof-of-solving&#34;&gt;
+  &lt;strong&gt;Proof of solving&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-solving&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;You need to use the format string to leak the stack cookie and with the buffer overflow to redirect code execution to the getshell function. Everything happens in a loop and we overwrite the loop variable from 1 to 2 by sending 100 &amp;ldquo;A&amp;quot;s and a &amp;lsquo;\x02&amp;rsquo; , and by sending &amp;ldquo;%35$p&amp;rdquo; you get the value of the stack cookie. I used 0x40087a to send the execution to a ret instruction because I get a misaligned stack and the program crashes.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>DUMB-DISCORD</title>
+      <link>/posts/2020/12/dumb-discord/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020/12/dumb-discord/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;h2 id=&#34;dumb-discord&#34;&gt;
+  &lt;strong&gt;DUMB-DISCORD&lt;/strong&gt;
+  &lt;a href=&#34;#dumb-discord&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;proof-of-flag&#34;&gt;
+  &lt;strong&gt;Proof of flag&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-flag&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;ctf{1b8fa7f33da67dfeb1d5f79850dcf13630b5563e98566bf7b76281d409d728c6}&lt;/p&gt;
+&lt;h3 id=&#34;summary-of-the-vulnerabilities-identified&#34;&gt;
+  &lt;strong&gt;Summary of the vulnerabilities identified&lt;/strong&gt;
+  &lt;a href=&#34;#summary-of-the-vulnerabilities-identified&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Invite the bot to a Discord server, give it the &amp;lsquo;dctf2020.cyberedu.ro&amp;rsquo; role, use the payload &amp;lsquo;/s基ay //getflaggetflag&amp;rsquo; to get the encoded flag and then decode it.&lt;/p&gt;
+&lt;h3 id=&#34;proof-of-solving&#34;&gt;
+  &lt;strong&gt;Proof of solving&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-solving&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;First off, we need to decompile the binary using &amp;lsquo;uncompyle6&amp;rsquo; and look at the code. But before I copy paste all the code we need to replace the obfuscated strings. A simple xor encoding is used, and we can use the included decoding function to replace them with the real strings. And we end up with this:&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>HTTP-FOR-PROS</title>
+      <link>/posts/2020/12/http-for-pros/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020/12/http-for-pros/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;h2 id=&#34;http-for-pros&#34;&gt;
+  &lt;strong&gt;HTTP-FOR-PROS&lt;/strong&gt;
+  &lt;a href=&#34;#http-for-pros&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;proof-of-flag&#34;&gt;
+  &lt;strong&gt;Proof of flag&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-flag&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;FLAG = CTF{75df3454a132fcdd37d94882e343c6a23e961ed70f8dd88195345aa874c63e63}&lt;/p&gt;
+&lt;h3 id=&#34;summary-of-the-vulnerabilities-identified&#34;&gt;
+  &lt;strong&gt;Summary of the vulnerabilities identified&lt;/strong&gt;
+  &lt;a href=&#34;#summary-of-the-vulnerabilities-identified&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;The application is vulnerable to Server Side Template Injection via the content GET parameter and can be used to get code execution on the system. It is not very straightforward since there is also a Web Application Firewall that is filtering our requests and looking for forbidden words in our requests. The solution is to use Python String formatting in order to split the forbidden words so that they won&amp;rsquo;t be matched.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>KALF GAME</title>
+      <link>/posts/2020/12/kalf-game/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020/12/kalf-game/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;h2 id=&#34;kalf-game&#34;&gt;
+  &lt;strong&gt;KALF GAME&lt;/strong&gt;
+  &lt;a href=&#34;#kalf-game&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;proof-of-flag&#34;&gt;
+  &lt;strong&gt;Proof of flag&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-flag&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;01660706613050         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         000007061         00007061         00007061&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;Bodderfore:304-3]         Cold XHF from from from SoftWork:34x3 () 0x560706423648         1.5 0x04111           SoftWork:31xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;msderodec3865f (dby)]         20           coderodec3865f (dby)]         20           coderodec3865f (dby)]         20           msderodec3865f (dby)]         21           msderodec3865f (dby)]         21           msderodec3865f (dby)]         21           msderodec3865f (dby)         21           msderodec3865f (dby)         21           msderodec3865f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;0x560706c35072 [dbt]           0x560706c35072 [dbt]           0x560706c35072 (dbt]           0x560706c35072 488040377640. tea rax, [sym.care::ptr::drop_(n_place::h14b254b3868f5bb2]           0x560706c35092 48804c34083. tea rdx, [var_s607]           0x560706c35092 48804c34083. tea rdx, [var_s607]           0x560706c35092 6000 [m 0 000676c35685&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;0.569760:35685 [of:a]&lt;!-- raw HTML omitted --&gt;; (OCS.3985 Trom from, from, 507.562786233867&lt;!-- raw HTML omitted --&gt;scientifications: ebility jup exclamation ebility&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;!-- raw HTML omitted --&gt;:&amp;gt; dso ctf{ddba6614a32 hit breakpoint :&amp;gt;&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+          &lt;td&gt;2456631c125eb1a4327c52686c71d909a92ec05ea5eb510eae81d9}&lt;!-- raw HTML omitted --&gt;at: 0x560760c3505d&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;ctfddba6614a32456631c125eb1a4327c52686c71d909a92ec05ea5eb510eae81d9&#34;&gt;
+  &lt;strong&gt;ctf{ddba6614a32456631c125eb1a4327c52686c71d909a92ec05ea5eb510eae81d9}&lt;/strong&gt;
+  &lt;a href=&#34;#ctfddba6614a32456631c125eb1a4327c52686c71d909a92ec05ea5eb510eae81d9&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;h3 id=&#34;summary-of-the-vulnerabilities-identified&#34;&gt;
+  &lt;strong&gt;Summary of the vulnerabilities identified&lt;/strong&gt;
+  &lt;a href=&#34;#summary-of-the-vulnerabilities-identified&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;The game is a basic snake game(which is the best game of snake I ever played, thank you Lucian, you made my day happier) and hides the flag using strings that are stored on the stack and a cool function like rot13, and the best thing it was written in rust which is the best language so far for humanity.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>MODERN LOGIN Proof of flag</title>
+      <link>/posts/2020/12/modern-login-proof-of-flag/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020/12/modern-login-proof-of-flag/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;&lt;strong&gt;MODERN LOGIN Proof of flag&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;FLAG = ctf{356c5e791de08610b8e9cb00a64d16c2cfc2be00b133fdfa5198420214909cc1}&lt;/p&gt;
+&lt;h3 id=&#34;summary-of-the-vulnerabilities-identified&#34;&gt;
+  &lt;strong&gt;Summary of the vulnerabilities identified&lt;/strong&gt;
+  &lt;a href=&#34;#summary-of-the-vulnerabilities-identified&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Challenge APK file can be easily decompiled using online services, scrolling through source files and assets we notice a mp3 which is not playable. Running file command on it we observe it is an archive, we decompress it and find obfuscated Python code. Cleaning up the code we start decoding the obfuscated strings in it and one of them is our flag.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>QR-MANIA</title>
+      <link>/posts/2020/12/qr-mania/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020/12/qr-mania/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;h2 id=&#34;qr-mania&#34;&gt;
+  &lt;strong&gt;QR-MANIA&lt;/strong&gt;
+  &lt;a href=&#34;#qr-mania&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;proof-of-flag&#34;&gt;
+  &lt;strong&gt;Proof of flag&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-flag&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;CTF{2b2e8580cdf35896d75bfc4b1bafff6ee90f6c525da3b9a26dd7726bf2171396}&lt;/p&gt;
+&lt;h3 id=&#34;summary-of-the-vulnerabilities-identified&#34;&gt;
+  &lt;strong&gt;Summary of the vulnerabilities identified&lt;/strong&gt;
+  &lt;a href=&#34;#summary-of-the-vulnerabilities-identified&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Inspecting the pcap file with wireshark I found HTTP responses with png images, each one containing a qr code, which decodes to a single character. The position of each character is inside the exif data of the corresponding image.&lt;/p&gt;
+&lt;h3 id=&#34;proof-of-solving&#34;&gt;
+  &lt;strong&gt;Proof of solving&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-solving&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Extract HTTP objects with wireshark from the provided .pcap file:&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>STRIPPEDGO</title>
+      <link>/posts/2020/12/strippedgo/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020/12/strippedgo/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;h1 id=&#34;strippedgo&#34;&gt;
+  &lt;strong&gt;STRIPPEDGO&lt;/strong&gt;
+  &lt;a href=&#34;#strippedgo&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h3 id=&#34;proof-of-flag&#34;&gt;
+  &lt;strong&gt;Proof of flag&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-flag&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;ctf{a4e394ae892144a54c008a3b480a1b22a6b64dd26c4b0c9eba498330f511b51e}&lt;/p&gt;
+&lt;h3 id=&#34;summary-of-the-vulnerabilities-identified&#34;&gt;
+  &lt;strong&gt;Summary of the vulnerabilities identified&lt;/strong&gt;
+  &lt;a href=&#34;#summary-of-the-vulnerabilities-identified&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Seek to the main of the program (sym.go.main.main) and extract the string before it gets encrypted&lt;/p&gt;
+&lt;h3 id=&#34;proof-of-solving&#34;&gt;
+  &lt;strong&gt;Proof of solving&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-solving&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;We start off by running file&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ file rev_strippedGo_strippedGO
+rev_strippedGo_strippedGO: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically
+linked, Go
+BuildID=pbHcqNyu7oMwNz2AOwlC/ipoepuEEs9kTpe_InyYc/zxH96PaxbdfxJ2l96QnT/-SUbqa7STSlM69LnCs6A,
+stripped
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;So it&amp;rsquo;s a go binary and it&amp;rsquo;s stripped, at least the title didn&amp;rsquo;t lie to us. We open it up in radare.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>STUG-REFERENCE</title>
+      <link>/posts/2020/12/stug-reference/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020/12/stug-reference/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;h2 id=&#34;stug-reference&#34;&gt;
+  &lt;strong&gt;STUG-REFERENCE&lt;/strong&gt;
+  &lt;a href=&#34;#stug-reference&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;proof-of-flag&#34;&gt;
+  &lt;strong&gt;Proof of flag&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-flag&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;ctf{32849dd9d7e7b313c214a7b1d004b776b4af0cedd9730e6ca05ef725a18e38e1}&lt;/p&gt;
+&lt;h3 id=&#34;summary-of-the-vulnerabilities-identified&#34;&gt;
+  &lt;strong&gt;Summary of the vulnerabilities identified&lt;/strong&gt;
+  &lt;a href=&#34;#summary-of-the-vulnerabilities-identified&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Use steghide to extract the flag from stug.jpg with password stug.&lt;/p&gt;
+&lt;h3 id=&#34;proof-of-solving&#34;&gt;
+  &lt;strong&gt;Proof of solving&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-solving&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;My teammates tried a lot of stuff, including brute forcing it with rockyou and a lot of stegano stuff. I tried some &amp;ldquo;obvious&amp;rdquo; passwords like &amp;ldquo;dctf&amp;rdquo;, &amp;ldquo;dctf2020&amp;rdquo; and &amp;ldquo;stug&amp;rdquo;. And stug ended up working out.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>T3AM_VI3W3R</title>
+      <link>/posts/2020/12/t3am_vi3w3r/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020/12/t3am_vi3w3r/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;h1 id=&#34;t3am_&#34;&gt;
+  &lt;strong&gt;T3AM_VI3W3R&lt;/strong&gt;
+  &lt;a href=&#34;#t3am_&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h3 id=&#34;proof-of-flag&#34;&gt;
+  &lt;strong&gt;Proof of flag&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-flag&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;DCTF{74a0f35841dfa7eddf5a87467c90da335132ae52c58ca440f31a53483cef7eac}&lt;/p&gt;
+&lt;h3 id=&#34;summary-of-the-vulnerabilities-identified&#34;&gt;
+  &lt;strong&gt;Summary of the vulnerabilities identified&lt;/strong&gt;
+  &lt;a href=&#34;#summary-of-the-vulnerabilities-identified&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Analysis on the VNC protocol.&lt;/p&gt;
+&lt;h3 id=&#34;proof-of-solving&#34;&gt;
+  &lt;strong&gt;Proof of solving&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-solving&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;After firing up Wireshark and Loading the provided .pcapng, we filter for the VNC protocol. We follow the TCP stream of the first entry and we find out that it spells out words with doubled letters.&lt;/p&gt;
+&lt;p&gt;The stream can be saved for later processing in a .txt format. We get rid of the extra letters and dots and we end up with a message that says :&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>WHY-XOR</title>
+      <link>/posts/2020/12/why-xor/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020/12/why-xor/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;h2 id=&#34;why-xor&#34;&gt;
+  &lt;strong&gt;WHY-XOR&lt;/strong&gt;
+  &lt;a href=&#34;#why-xor&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;proof-of-flag&#34;&gt;
+  &lt;strong&gt;Proof of flag&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-flag&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;ctf{79f107231696395c004e87dd7709d3990f0d602a57e9f56ac428b31138bda258}&lt;/p&gt;
+&lt;h3 id=&#34;summary-of-the-vulnerabilities-identified&#34;&gt;
+  &lt;strong&gt;Summary of the vulnerabilities identified&lt;/strong&gt;
+  &lt;a href=&#34;#summary-of-the-vulnerabilities-identified&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;We have a xored flag and it starts 3 null bytes, so we can assume the key at least starts with &amp;ldquo;ctf&amp;rdquo;. And that turns out to be the correct key&lt;/p&gt;
+&lt;h3 id=&#34;proof-of-solving&#34;&gt;
+  &lt;strong&gt;Proof of solving&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-solving&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;So I started out by reading the challenge description where it clearly says that the flag format is &amp;ldquo;CTF{sha256}&amp;rdquo; so of course I tried &amp;ldquo;CTF&amp;rdquo; as the key, but that didn&amp;rsquo;t work so I was really confused for some time.&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>YOPASS-GO</title>
+      <link>/posts/2020/12/yopass-go/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2020/12/yopass-go/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;h2 id=&#34;yopass-go&#34;&gt;
+  &lt;strong&gt;YOPASS-GO&lt;/strong&gt;
+  &lt;a href=&#34;#yopass-go&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;h3 id=&#34;proof-of-flag&#34;&gt;
+  &lt;strong&gt;Proof of flag&lt;/strong&gt;
+  &lt;a href=&#34;#proof-of-flag&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;pwndbg&amp;gt; x/69c&lt;/th&gt;
+          &lt;th&gt;0×4c55f2&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0×4c55f2:&lt;/td&gt;
+          &lt;td&gt;99 &amp;lsquo;c&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;116 &amp;rsquo;t&#39;&lt;/td&gt;
+          &lt;td&gt;102 &amp;lsquo;f&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;123 &amp;lsquo;{&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;48 &amp;lsquo;0&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;57 &amp;lsquo;9&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;54 &amp;lsquo;6&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;50 &amp;lsquo;2&amp;rsquo;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0×4c55fa:&lt;/td&gt;
+          &lt;td&gt;51 &amp;lsquo;3&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;57 &amp;lsquo;9&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;51 &amp;lsquo;3&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;99 &amp;lsquo;c&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;101 &amp;rsquo;e&#39;&lt;/td&gt;
+          &lt;td&gt;51 &amp;lsquo;3&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;56 &amp;lsquo;8&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;48 &amp;lsquo;0&amp;rsquo;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0×4c5602:&lt;/td&gt;
+          &lt;td&gt;99 &amp;lsquo;c&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;51 &amp;lsquo;3&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;99 &amp;lsquo;c&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;102 &amp;lsquo;f&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;54 &amp;lsquo;6&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;57 &amp;lsquo;9&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;54 &amp;lsquo;6&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;99 &amp;lsquo;c&amp;rsquo;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0×4c560a:&lt;/td&gt;
+          &lt;td&gt;54 &amp;lsquo;6&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;99 &amp;lsquo;c&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;53 &amp;lsquo;5&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;57 &amp;lsquo;9&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;97 &amp;lsquo;a&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;48 &amp;lsquo;0&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;56 &amp;lsquo;8&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;53 &amp;lsquo;5&amp;rsquo;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0×4c5612:&lt;/td&gt;
+          &lt;td&gt;99 &amp;lsquo;c&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;100 &amp;rsquo;d&#39;&lt;/td&gt;
+          &lt;td&gt;101 &amp;rsquo;e&#39;&lt;/td&gt;
+          &lt;td&gt;48 &amp;lsquo;0&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;102 &amp;lsquo;f&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;55 &amp;lsquo;7&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;101 &amp;rsquo;e&#39;&lt;/td&gt;
+          &lt;td&gt;100 &amp;rsquo;d&#39;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0×4c561a:&lt;/td&gt;
+          &lt;td&gt;100 &amp;rsquo;d&#39;&lt;/td&gt;
+          &lt;td&gt;49 &amp;lsquo;1&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;51 &amp;lsquo;3&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;56 &amp;lsquo;8&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;50 &amp;lsquo;2&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;102 &amp;lsquo;f&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;50 &amp;lsquo;2&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;101 &amp;rsquo;e&#39;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0×4c5622:&lt;/td&gt;
+          &lt;td&gt;57 &amp;lsquo;9&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;48 &amp;lsquo;0&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;57 &amp;lsquo;9&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;48 &amp;lsquo;0&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;50 &amp;lsquo;2&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;50 &amp;lsquo;2&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;48 &amp;lsquo;0&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;97 &amp;lsquo;a&amp;rsquo;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0×4c562a:&lt;/td&gt;
+          &lt;td&gt;98 &amp;lsquo;b&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;100 &amp;rsquo;d&#39;&lt;/td&gt;
+          &lt;td&gt;102 &amp;lsquo;f&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;57 &amp;lsquo;9&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;97 &amp;lsquo;a&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;54 &amp;lsquo;6&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;51 &amp;lsquo;3&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;57 &amp;lsquo;9&amp;rsquo;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0×4c5632:&lt;/td&gt;
+          &lt;td&gt;54 &amp;lsquo;6&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;99 &amp;lsquo;c&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;56 &amp;lsquo;8&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;56 &amp;lsquo;8&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;125 &amp;lsquo;}&amp;rsquo;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;pwndbg&amp;gt; x/1s&lt;/td&gt;
+          &lt;td&gt;0×4c55f2&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;0×4c55f2:&lt;/td&gt;
+          &lt;td&gt;&amp;ldquo;ctf{090&lt;/td&gt;
+          &lt;td&gt;52393ce3&lt;/td&gt;
+          &lt;td&gt;80c3cf69&lt;/td&gt;
+          &lt;td&gt;6c6c59a0&lt;/td&gt;
+          &lt;td&gt;85cde0f7&lt;/td&gt;
+          &lt;td&gt;edd1382f&lt;/td&gt;
+          &lt;td&gt;2e9090220&lt;/td&gt;
+          &lt;td&gt;0abdf9a6396c88&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;ctf{0962393ce380c3cf696c6c59a085cde0f7edd1382f2e9090220abdf9a6396c88}&lt;/p&gt;
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          &lt;p&gt;A website where I&amp;rsquo;ll post stuff and things&lt;/p&gt;
           
         
         </description>
@@ -36,10 +809,10 @@
     
     <item>
       <title>Alune</title>
-      <link>https://xabifk.com/alune/</link>
+      <link>/alune/</link>
       <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://xabifk.com/alune/</guid>
+      <guid>/alune/</guid>
       <description>
         
           
@@ -48,7 +821,11 @@
         
         
         
-          You know it # Just literally the best thing ever!
+          &lt;h3 id=&#34;you-know-it&#34;&gt;
+  You know it
+  &lt;a href=&#34;#you-know-it&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Just literally the &lt;strong&gt;best&lt;/strong&gt; thing &lt;strong&gt;&lt;em&gt;ever&lt;/em&gt;&lt;/strong&gt;!&lt;/p&gt;
           
         
         </description>
@@ -56,10 +833,10 @@
     
     <item>
       <title>Test post</title>
-      <link>https://xabifk.com/posts/2020/04/test-post/</link>
+      <link>/posts/2020/04/test-post/</link>
       <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://xabifk.com/posts/2020/04/test-post/</guid>
+      <guid>/posts/2020/04/test-post/</guid>
       <description>
         
           
@@ -68,11 +845,35 @@
         
         
         
-          This is just a test post # There&amp;rsquo;s really nothing to see here. I&amp;rsquo;m just a test.
-You want flags? # What are you talking about? I don&amp;rsquo;t have any flags. But why does this remind me of peanuts?
-For real, you can go away # You are wasting your time and my bandwidth.
-Follow the following steps:
-Go away Run # rm -rf / Just leave &amp;hellip; Please Still here?
+          &lt;h2 id=&#34;this-is-just-a-test-post&#34;&gt;
+  This is just a test post
+  &lt;a href=&#34;#this-is-just-a-test-post&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;There&amp;rsquo;s really nothing to see here. I&amp;rsquo;m just a test.&lt;/p&gt;
+&lt;h2 id=&#34;you-want-flags&#34;&gt;
+  You want flags?
+  &lt;a href=&#34;#you-want-flags&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;What are you talking about? I don&amp;rsquo;t have any flags.
+But why does this remind me of peanuts?&lt;/p&gt;
+&lt;h2 id=&#34;for-real-you-can-go-away&#34;&gt;
+  For real, you can go away
+  &lt;a href=&#34;#for-real-you-can-go-away&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;You are wasting your time and my bandwidth.&lt;/p&gt;
+&lt;p&gt;Follow the following steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go away&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;# rm -rf / &lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Just leave&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Please&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;still-here&#34;&gt;
+  Still here?
+  &lt;a href=&#34;#still-here&#34; class=&#34;h-anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Ok &lt;a href=&#34;https://bit.ly/2w4ItRo&#34;&gt;here&lt;/a&gt; you go. I hope it&amp;rsquo;s enough.&lt;/p&gt;
           
         
         </description>
@@ -80,10 +881,10 @@ Go away Run # rm -rf / Just leave &amp;hellip; Please Still here?
     
     <item>
       <title>Archive</title>
-      <link>https://xabifk.com/archive/</link>
+      <link>/archive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://xabifk.com/archive/</guid>
+      <guid>/archive/</guid>
       <description>
         
           

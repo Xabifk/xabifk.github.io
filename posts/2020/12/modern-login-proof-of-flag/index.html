@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>
+        MODERN LOGIN Proof of flag ::
+        Xabifk
+      </title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="MODERN LOGIN Proof of flag
+FLAG = ctf{356c5e791de08610b8e9cb00a64d16c2cfc2be00b133fdfa5198420214909cc1}
+Summary of the vulnerabilities identified # Challenge APK file can be easily decompiled using online services, scrolling through source files and assets we notice a mp3 which is not playable. Running file command on it we observe it is an archive, we decompress it and find obfuscated Python code. Cleaning up the code we start decoding the obfuscated strings in it and one of them is our flag.
+"
+/>
+<meta
+  name="keywords"
+  content=""
+/>
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="/posts/2020/12/modern-login-proof-of-flag/" />
+
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css" />
+
+<link rel="stylesheet" href="/style.css" />
+
+
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="/img/apple-touch-icon-144-precomposed.png"
+/>
+<link rel="shortcut icon" href="/img/favicon.png" />
+
+
+<link href="/assets/fonts/Inter-Italic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Regular.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Medium.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-MediumItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Bold.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-BoldItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="MODERN LOGIN Proof of flag">
+  <meta name="twitter:description" content="MODERN LOGIN Proof of flag
+FLAG = ctf{356c5e791de08610b8e9cb00a64d16c2cfc2be00b133fdfa5198420214909cc1}
+Summary of the vulnerabilities identified # Challenge APK file can be easily decompiled using online services, scrolling through source files and assets we notice a mp3 which is not playable. Running file command on it we observe it is an archive, we decompress it and find obfuscated Python code. Cleaning up the code we start decoding the obfuscated strings in it and one of them is our flag.">
+
+
+
+<meta property="og:url" content="/posts/2020/12/modern-login-proof-of-flag/">
+  <meta property="og:site_name" content="Xabifk">
+  <meta property="og:title" content="MODERN LOGIN Proof of flag">
+  <meta property="og:description" content="MODERN LOGIN Proof of flag
+FLAG = ctf{356c5e791de08610b8e9cb00a64d16c2cfc2be00b133fdfa5198420214909cc1}
+Summary of the vulnerabilities identified # Challenge APK file can be easily decompiled using online services, scrolling through source files and assets we notice a mp3 which is not playable. Running file command on it we observe it is an archive, we decompress it and find obfuscated Python code. Cleaning up the code we start decoding the obfuscated strings in it and one of them is our flag.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-12-31T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-12-31T00:00:00+00:00">
+    <meta property="article:tag" content="Writeup">
+    <meta property="article:tag" content="DCTF2020">
+    <meta property="article:tag" content="CTF">
+      <meta property="og:see_also" content="/posts/2020/12/alien-inclusion/">
+      <meta property="og:see_also" content="/posts/2020/12/basic-coms/">
+      <meta property="og:see_also" content="/posts/2020/12/bazooka/">
+      <meta property="og:see_also" content="/posts/2020/12/bro64/">
+      <meta property="og:see_also" content="/posts/2020/12/darkmagic/">
+      <meta property="og:see_also" content="/posts/2020/12/dumb-discord/">
+      <meta property="og:see_also" content="/posts/2020/12/http-for-pros/">
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a
+  href="/"
+  class="logo"
+  style="text-decoration: none;"
+>
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span>
+    <span class="logo__text"
+      >xabifk</span
+    >
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/posts">Posts</a></li>
+        
+      
+      
+        <ul class="menu__sub-inner">
+          <li class="menu__sub-inner-more-trigger">
+            Show more
+            <span class="menu__sub-inner-more-trigger-icon"
+              ><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span
+            >
+          </li>
+          <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="/series">Series</a></li>
+              
+            
+              
+                <li><a href="/tags">Tags</a></li>
+              
+            
+              
+                <li><a href="/archive">Timeline</a></li>
+              
+            
+          </ul>
+        </ul>
+      
+      
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/posts">Posts</a></li>
+      
+    
+      
+        <li><a href="/series">Series</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+      
+        <li><a href="/archive">Timeline</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg
+  class="theme-toggler"
+  width="24"
+  height="24"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
+  />
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h1 class="post-title">MODERN LOGIN Proof of flag</h1>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2020-12-31
+        </span>
+
+        
+          
+        
+      
+
+      
+        <span class="post-author"
+          >— Written by Xabifk</span
+        >
+
+
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          <a href="/tags/writeup/">#writeup</a>&nbsp;
+        
+          <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+        
+          <a href="/tags/ctf/">#CTF</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+      <p><strong>MODERN LOGIN Proof of flag</strong></p>
+<p>FLAG = ctf{356c5e791de08610b8e9cb00a64d16c2cfc2be00b133fdfa5198420214909cc1}</p>
+<h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>Challenge APK file can be easily decompiled using online services, scrolling through source files and assets we notice a mp3 which is not playable. Running file command on it we observe it is an archive, we decompress it and find obfuscated Python code. Cleaning up the code we start decoding the obfuscated strings in it and one of them is our flag.</p>
+<h3 id="proof-of-solving">
+  <strong>Proof of solving</strong>
+  <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>We begin by decompiling the challenge apk using a basic free online service.</p>
+<p><img src="attachments/_page_26_Picture_0.jpeg" alt=""></p>
+<p>After downloading the resulting archive we can start looking through the source files, see what libraries are used etc. However that turned out to be a rabbit hole and we noticed that there is a single mp3 file in the assets folder which we thought was corrupted. But running the file command on it we find out it is actually a</p>
+<table>
+  <thead>
+      <tr>
+          <th>anna 🦻 🥵</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>sleshwave@DESKTOP</td>
+          <td>-70BJVT3:/mnt/</td>
+          <td>/d/CTFs/dctf_2020/mod</td>
+          <td>ern_login/assets</td>
+          <td>file private.mp3</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>private.mp3: gzip</td>
+          <td>compressed da</td>
+          <td>ata, was &ldquo;private.mp3</td>
+          <td>&ldquo;, last modified:</td>
+          <td>Wed Nov 4 14:28:05</td>
+          <td>2020, max compression</td>
+      </tr>
+      <tr>
+          <td>sleshwave@DESKTOP</td>
+          <td>-70BJVT3:/mnt/</td>
+          <td>/d/CTFs/dctf_2020/mod</td>
+          <td>ern_login/assets$</td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<p>gzip archive.</p>
+<p>After changing it to have a .gz extension we can use &ldquo;gzip -d private.gz&rdquo; to decompress it and find out that it contained only a tar file in it.</p>
+<table>
+  <thead>
+      <tr>
+          <th>inchoi e pago co (pago Serbighiano) Sy</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>sleshwave@DESKTOP-70BJVT3:/mnt/d/CTFs/dctf_2020/modern_login/assets$ gzip -d pri^C</td>
+      </tr>
+      <tr>
+          <td>sleshwave@DESKTOP-70BJVT3:/mnt/d/CTFs/dctf_2020/modern_login/assets$ mv private.mp3 private.gz</td>
+      </tr>
+      <tr>
+          <td>sleshwave@DESKTOP-70BJVT3:/mnt/d/CTFs/dctf_2020/modern_login/assets$ gzip -d private.gz</td>
+      </tr>
+      <tr>
+          <td><!-- raw HTML omitted -->sleshwave@DESKTOP-70BJVT3:/mnt/d/CTFs/dctf_2020/modern_login/assets$ ls -la<!-- raw HTML omitted --></td>
+      </tr>
+      <tr>
+          <td>total 44884</td>
+      </tr>
+      <tr>
+          <td>drwxrwxrwx 1 sleshwave sleshwave 512 Dec 7 18:37</td>
+      </tr>
+      <tr>
+          <td>drwxrwxrwx 1 sleshwave sleshwave 512 Dec 5 19:40 🚬</td>
+      </tr>
+      <tr>
+          <td>drwxrwxrwx 1 sleshwave sleshwave 512 Jan 1 1970 python bundle</td>
+      </tr>
+      <tr>
+          <td>-rwxrwxrwx 1 sleshwave sleshwave 2980 Dec 7 18:21 main.py</td>
+      </tr>
+      <tr>
+          <td>-rwxrwxrwx 1 sleshwave sleshwave 85 Nov 4 16:28 p4a_env_vars.txt</td>
+      </tr>
+      <tr>
+          <td>-rwxrwxrwx 1 sleshwave sleshwave 22978560 Dec 7 18:36 private</td>
+      </tr>
+      <tr>
+          <td>-rwxrwxrwx 1 sleshwave sleshwave 22978560 Dec 5 09:37 private.tar</td>
+      </tr>
+      <tr>
+          <td>-rwxrwxrwx 1 sleshwave sleshwave 98 Nov 4 16:28 sitecustomize.py</td>
+      </tr>
+      <tr>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<p><img src="attachments/_page_27_Figure_0.jpeg" alt=""></p>
+<p>Now we are left with what seems to be a simple python project made for android with some dependencies. We can already tell we are interested only in the main.py file and maybe sitecustomize.py/p4a_env_vars.txt files but these last 2 turned out to be useless.</p>
+<p><img src="attachments/_page_27_Picture_2.jpeg" alt=""></p>
+<p>Looking through main.py we can see it is a heavily obfuscated file and that our first priority should be to deobfuscate it and make it run on our system (basically remove unnecessary</p>
+<p>dependencies).</p>
+<p><img src="attachments/_page_28_Picture_1.jpeg" alt=""></p>
+<p>In order to deobfuscate it, we start by renaming variables and function names, cleaning up function calls. We then remove the unneeded imports, replace the functions. We also realise that there were some input fields that were used for changing the code flow (the if on line 25) and that the flag is stored in the g variable (its the one that gets printed if the &ldquo;if&rdquo; call is True). After all these steps the deobfuscated code looks something like this:</p>
+<p>Running this deobfuscated code we get the flag.</p>
+
+    </div>
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h"
+              >Read other posts</span
+            >
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="/posts/2020/12/kalf-game/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">KALF GAME</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="/posts/2020/12/qr-mania/">
+                  <span class="button__text">QR-MANIA</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+    
+      
+        
+
+      
+    
+  </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <a
+  href="/"
+  class="logo"
+  style="text-decoration: none;"
+>
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span>
+    <span class="logo__text"
+      >xabifk</span
+    >
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span
+          >© 2025 Powered by
+          <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span
+        >
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+  </body>
+</html>

